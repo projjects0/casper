@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background: #000; /* Black background */
-  color: #ffffff; /* White text */
+  color: #ffffff !important; /* Set all text to white */
 }
 
 *, *:before, *:after {
@@ -24,13 +24,12 @@ nav ul {
   width: 100%; /* Full width */
   margin: 0 auto;
   color: #f0f0f0;
-  border-radius: 15px;
+  border-radius: 12px;
   padding: 10px 20px; /* Adjusted padding */
   position: fixed; /* Fixed position */
   top: 0;
   z-index: 1000; /* Ensure it stays on top */
   text-shadow: 0 0 10px #ff0000, 0 0 20px #0022ff, 0 0 30px #0022ff, 0 0 40px #0022ff; 
-
 }
 
 .nav a {
@@ -45,7 +44,7 @@ nav ul {
   display: flex;
   justify-content: center; /* Center items */
   flex-wrap: nowrap; /* Prevent wrapping to keep items in one line */
-  gap: 10px; /* Add spacing between menu items */
+  gap: 2px; /* Add spacing between menu items */
 }
 
 .nav__menu {
@@ -121,7 +120,7 @@ nav ul {
 
   .nav__menu-item {
     padding: 8px; /* Reduce padding for smaller screens */
-    font-size: 0.5rem; /* Further reduce font size for smaller screens */
+    font-size: 0.8rem; /* Further reduce font size for smaller screens */
   }
 
   .nav__submenu {
@@ -153,7 +152,9 @@ nav ul {
   padding: 60px 0;
 }
 
-
+.modal.fade{
+  background-color: #000;
+}
 
 /* About Us Section */
 .about-section {
@@ -242,8 +243,17 @@ nav ul {
   animation: fadeIn 1s ease-in;
 }
 
+/* Quick View Modal Text Color */
+#quickViewModal .modal-content {
+  color: #000; /* Black text for quick view */
+}
 
-
+/* Ensure quick view styles do not apply to mobile views */
+@media (max-width: 768px) {
+  .quickview {
+    color: inherit; /* Inherit the color from parent */
+  }
+}
 
 /* author: https://codepen.io/krautgti/pen/VwXNRYE
 KrautGTI
@@ -285,30 +295,32 @@ KrautGTI
  }
  
  .container .box::before {
-   content: "sasa";
+   content: "CASPER";
    position: absolute;
    top: 20px;
    left: 20px;
-   font-size: 6em;
+   font-size: 3em;
    font-weight: 900;
    color: var(--card-bg-text);
    font-style: italic;
-   opacity: 0;
+   opacity: 0.5;
    transition: 0.5s;
-   color: #7c0505;
+   color: #8f8b8b;
  }
  
  .container .box::after {
-   content: "cafe";
+   content: "CAFE";
    position: absolute;
    bottom: 20px;
    right: 20px;
-   font-size: 4.5em;
+   font-size: 3em;
    font-weight: 900;
    color: var(--card-bg-text);
    font-style: italic;
-   opacity: 0;
+   opacity: 0.5;
    transition: 0.5s;
+   color: #8f8b8b;
+
  }
  
  .container .box:hover::after,
@@ -430,103 +442,106 @@ KrautGTI
  .mode-switch.active .moon {
    fill: var(--name-color);
  }
- 
- /* ================================================= */
- /* Responsive Media Queries (Added Below) */
- /* ================================================= */
- 
- /* For Tablets and Smaller Laptops */
- @media (max-width: 1024px) {
-   .container {
-     width: 100%; /* Full width for smaller screens */
-     padding: 0 20px; /* Add padding for better spacing */
-   }
- 
-   .container .box {
-     width: 45%; /* Two boxes per row */
-     margin: 20px; /* Reduce margin for better spacing */
-   }
- 
-   .container .box::before {
-     font-size: 4em; /* Reduce font size for smaller screens */
-   }
- 
-   .container .box::after {
-     font-size: 3em; /* Reduce font size for smaller screens */
-   }
- 
-   .container .box .circle {
-     width: 150px; /* Reduce circle size */
-     height: 150px; /* Reduce circle size */
-   }
- 
-   .container .box .product {
-     max-width: 80%; /* Adjust product image size */
-   }
- }
- 
- /* For Mobile Devices */
- @media (max-width: 768px) {
-   .container .box {
-     width: 100%; /* One box per row */
-     margin: 10px 0; /* Reduce margin for better spacing */
-   }
- 
-   .container .box::before {
-     font-size: 3em; /* Further reduce font size */
-   }
- 
-   .container .box::after {
-     font-size: 2em; /* Further reduce font size */
-   }
- 
-   .container .box .circle {
-     width: 120px; /* Further reduce circle size */
-     height: 120px; /* Further reduce circle size */
-   }
- 
-   .container .box .product {
-     max-width: 70%; /* Further adjust product image size */
-   }
- }
- 
- /* For Very Small Mobile Devices */
- @media (max-width: 480px) {
-   .container .box::before {
-     font-size: 2.5em; /* Further reduce font size */
-   }
- 
-   .container .box::after {
-     font-size: 1.5em; /* Further reduce font size */
-   }
- 
-   .container .box .circle {
-     width: 100px; /* Further reduce circle size */
-     height: 100px; /* Further reduce circle size */
-   }
- 
-   .container .box .product {
-     max-width: 60%; /* Further adjust product image size */
-   }
- }
+ .line {
+  width: 80%; /* Adjust the width of the line */
+  height: 2px; /* Line thickness */
+  background-color: #000000; /* Line color */
+  margin: 20px auto; /* Center the line and add spacing */
+}
+.line2 {
+  width: 100%; /* Adjust the width of the line */
+  height: 2px; /* Line thickness */
+  background-color: #ffffff; /* Line color */
+  margin: 40px auto; /* Center the line and add spacing */
+}
 
 
+.end {
+  color: rgb(216, 19, 19);
+}
+.highlight-link {
+  color: blue; /* Change to your desired color */
+  text-decoration: none; /* Optional: Removes underline */
+}
+.highlight-link:hover {
+  color: rgb(200, 203, 5); /* Optional: Change color on hover */
+}
 
+/* ================================================= */
+/* Responsive Media Queries (Added Below) */
+/* ================================================= */
 
+/* For Tablets and Smaller Laptops */
+@media (max-width: 1024px) {
+  .container {
+    width: 100%; /* Full width for smaller screens */
+    padding: 0 20px; /* Add padding for better spacing */
+  }
 
+  .container .box {
+    width: 45%; /* Two boxes per row */
+    margin: 20px; /* Reduce margin for better spacing */
+  }
 
+  .container .box::before {
+    font-size: 4em; /* Reduce font size for smaller screens */
+  }
 
+  .container .box::after {
+    font-size: 3em; /* Reduce font size for smaller screens */
+  }
 
+  .container .box .circle {
+    width: 150px; /* Reduce circle size */
+    height: 150px; /* Reduce circle size */
+  }
 
+  .container .box .product {
+    max-width: 80%; /* Adjust product image size */
+  }
+}
 
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .container .box {
+    width: 100%; /* One box per row */
+    margin: 10px 0; /* Reduce margin for better spacing */
+  }
 
+  .container .box::before {
+    font-size: 3em; /* Further reduce font size */
+  }
 
+  .container .box::after {
+    font-size: 2em; /* Further reduce font size */
+  }
 
+  .container .box .circle {
+    width: 120px; /* Further reduce circle size */
+    height: 120px; /* Further reduce circle size */
+  }
 
+  .container .box .product {
+    max-width: 70%; /* Further adjust product image size */
+  }
+}
 
+/* For Very Small Mobile Devices */
+@media (max-width: 480px) {
+  .container .box::before {
+    font-size: 2.5em; /* Further reduce font size */
+  }
 
+  .container .box::after {
+    font-size: 1.5em; /* Further reduce font size */
+  }
 
+  .container .box .circle {
+    width: 100px; /* Further reduce circle size */
+    height: 100px; /* Further reduce circle size */
+  }
 
-
-
-
+  .container .box .product {
+    max-width: 60%; /* Further adjust product image size */
+  }
+}
