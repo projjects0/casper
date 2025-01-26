@@ -95,6 +95,7 @@ nav ul {
   background: #333;
   border-top: 2px solid #fff; /* White border between menu items and submenus */
   border-radius: 8px;
+  z-index: 1000; /* Ensure submenu appears above other elements */
 }
 
 .nav__submenu-item {
@@ -285,16 +286,14 @@ KrautGTI
    padding: 0;
    font-family: "Poppins", sans-serif;
  }
- 
+
  :root {
    --main-bg: #ff0000;
    --box-bg: #0a0a0a;
    --name-color: #ffffff;
    --card-bg-text: #ff0000;
  }
- 
- 
- 
+
  .container {
    position: relative;
    display: flex;
@@ -304,7 +303,7 @@ KrautGTI
    width: 1200px;
    transform-style: preserve-3d;
  }
- 
+
  .container .box {
    position: relative;
    width: 300px;
@@ -314,7 +313,7 @@ KrautGTI
    border-radius: 20px;
    transform-style: preserve-3d;
  }
- 
+
  .container .box::before {
    content: "CASPER";
    position: absolute;
@@ -328,7 +327,7 @@ KrautGTI
    transition: 0.5s;
    color: #8f8b8b;
  }
- 
+
  .container .box::after {
    content: "CAFE";
    position: absolute;
@@ -341,14 +340,13 @@ KrautGTI
    opacity: 0.5;
    transition: 0.5s;
    color: #8f8b8b;
-
  }
- 
+
  .container .box:hover::after,
  .container .box:hover::before {
    opacity: 0.04;
  }
- 
+
  .container .box .name {
    position: absolute;
    top: 0;
@@ -362,12 +360,12 @@ KrautGTI
    opacity: 0;
    z-index: 10;
  }
- 
+
  .container .box:hover .name {
    top: 40px;
    opacity: 1;
  }
- 
+
  .container .box .buy {
    position: absolute;
    bottom: 0;
@@ -383,12 +381,12 @@ KrautGTI
    opacity: 0;
    z-index: 10;
  }
- 
+
  .container .box:hover .buy {
    bottom: 30px;
    opacity: 1;
  }
- 
+
  .container .box .circle {
    position: absolute;
    top: 50%;
@@ -403,22 +401,11 @@ KrautGTI
    opacity: 1;
    transform: translate3d(-50%, -50%, 0px);
  }
- 
+
  .container .box:hover .circle {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   width: 200px;
-   height: 200px;
-   border-radius: 50%;
-   transition: 0.5s;
-   background: #ffffff;
-   transform-style: preserve-3d;
-   z-index: 10;
-   opacity: 1;
    transform: translate3d(-50%, -50%, 35px);
  }
- 
+
  .container .box .product {
    position: absolute;
    top: 50%;
@@ -426,30 +413,29 @@ KrautGTI
    max-width: 300px;
    transition: 0.5s;
    z-index: 11;
-   transition: 0.5s;
    transform-style: preserve-3d;
    transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
  }
- 
+
  .container .box:hover .product {
    transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
  }
- 
+
  .container .box:nth-child(1) .circle,
  .container .box:nth-child(1) .buy {
    background: #d0ff00;
  }
- 
+
  .container .box:nth-child(2) .circle,
  .container .box:nth-child(2) .buy {
    background: #1DA3C3;
  }
- 
+
  .container .box:nth-child(3) .circle,
  .container .box:nth-child(3) .buy {
    background: #eb0e2f;
  }
- 
+
  .mode-switch {
    background-color: transparent;
    border: none;
@@ -459,110 +445,112 @@ KrautGTI
    justify-content: center;
    align-items: center;
  }
- 
+
  .mode-switch.active .moon {
    fill: var(--name-color);
  }
+
  .line {
-  width: 80%; /* Adjust the width of the line */
-  height: 2px; /* Line thickness */
-  background-color: #000000; /* Line color */
-  margin: 20px auto; /* Center the line and add spacing */
-}
-.line2 {
-  width: 100%; /* Adjust the width of the line */
-  height: 2px; /* Line thickness */
-  background-color: #ffffff; /* Line color */
-  margin: 40px auto; /* Center the line and add spacing */
-}
+   width: 80%;
+   height: 2px;
+   background-color: #000000;
+   margin: 20px auto;
+ }
 
+ .line2 {
+   width: 100%;
+   height: 2px;
+   background-color: #ffffff;
+   margin: 40px auto;
+ }
 
-.end {
-  color: rgb(216, 19, 19);
-}
-.highlight-link {
-  color: blue; /* Change to your desired color */
-  text-decoration: none; /* Optional: Removes underline */
-}
-.highlight-link:hover {
-  color: rgb(200, 203, 5); /* Optional: Change color on hover */
-}
+ .end {
+   color: rgb(216, 19, 19);
+ }
 
-/* ================================================= */
-/* Responsive Media Queries (Added Below) */
-/* ================================================= */
+ .highlight-link {
+   color: blue;
+   text-decoration: none;
+ }
 
-/* For Tablets and Smaller Laptops */
-@media (max-width: 1024px) {
-  .container {
-    width: 100%; /* Full width for smaller screens */
-    padding: 0 20px; /* Add padding for better spacing */
-  }
+ .highlight-link:hover {
+   color: rgb(200, 203, 5);
+ }
 
-  .container .box {
-    width: 45%; /* Two boxes per row */
-    margin: 20px; /* Reduce margin for better spacing */
-  }
+ /* Responsive Media Queries */
+ @media (max-width: 1024px) {
+   .container {
+     width: 100%;
+     padding: 0 20px;
+   }
 
-  .container .box::before {
-    font-size: 4em; /* Reduce font size for smaller screens */
-  }
+   .container .box {
+     width: 45%;
+     margin: 20px;
+   }
 
-  .container .box::after {
-    font-size: 3em; /* Reduce font size for smaller screens */
-  }
+   .container .box::before {
+     font-size: 4em;
+   }
 
-  .container .box .circle {
-    width: 150px; /* Reduce circle size */
-    height: 150px; /* Reduce circle size */
-  }
+   .container .box::after {
+     font-size: 3em;
+   }
 
-  .container .box .product {
-    max-width: 80%; /* Adjust product image size */
-  }
-}
+   .container .box .circle {
+     width: 150px;
+     height: 150px;
+   }
 
-/* For Mobile Devices */
-@media (max-width: 768px) {
-  .container .box {
-    width: 100%; /* One box per row */
-    margin: 10px 0; /* Reduce margin for better spacing */
-  }
+   .container .box .product {
+     max-width: 80%;
+   }
+ }
 
-  .container .box::before {
-    font-size: 3em; /* Further reduce font size */
-  }
+ @media (max-width: 768px) {
+   .container .box {
+     width: 48%; /* عرض العناصر بنسبة 48% للسماح بعنصرين في الصف الواحد */
+     margin: 1%; /* تباعد صغير بين العناصر */
+   }
 
-  .container .box::after {
-    font-size: 2em; /* Further reduce font size */
-  }
+   .container .box::before {
+     font-size: 2em; /* تعديل حجم الخط */
+   }
 
-  .container .box .circle {
-    width: 120px; /* Further reduce circle size */
-    height: 120px; /* Further reduce circle size */
-  }
+   .container .box::after {
+     font-size: 1.5em; /* تعديل حجم الخط */
+   }
 
-  .container .box .product {
-    max-width: 70%; /* Further adjust product image size */
-  }
-}
+   .container .box .circle {
+     width: 100px; /* تعديل حجم الدائرة */
+     height: 100px; /* تعديل حجم الدائرة */
+   }
 
-/* For Very Small Mobile Devices */
-@media (max-width: 480px) {
-  .container .box::before {
-    font-size: 2.5em; /* Further reduce font size */
-  }
+   .container .box .product {
+     max-width: 80%; /* تعديل حجم الصورة */
+   }
+ }
 
-  .container .box::after {
-    font-size: 1.5em; /* Further reduce font size */
-  }
+ @media (max-width: 480px) {
+   .container .box {
+     width: 48%; /* عرض العناصر بنسبة 48% للسماح بعنصرين في الصف الواحد */
+     margin: 1%; /* تباعد صغير بين العناصر */
+   }
 
-  .container .box .circle {
-    width: 100px; /* Further reduce circle size */
-    height: 100px; /* Further reduce circle size */
-  }
+   .container .box::before {
+     font-size: 1.5em; /* تعديل حجم الخط */
+   }
 
-  .container .box .product {
-    max-width: 60%; /* Further adjust product image size */
-  }
-}
+   .container .box::after {
+     font-size: 1em; /* تعديل حجم الخط */
+   }
+
+   .container .box .circle {
+     width: 80px; /* تعديل حجم الدائرة */
+     height: 80px; /* تعديل حجم الدائرة */
+   }
+
+   .container .box .product {
+     max-width: 70%; /* تعديل حجم الصورة */
+   }
+ }
