@@ -1,264 +1,556 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant & Café Menu</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
- 
-      <link rel="stylesheet" href="style.css">
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #000; /* Black background */
+  color: #ffffff !important; /* Set all text to white */
+}
 
-   
-</head>
-<body>
-  <!-- Navigation Bar -->
-  <nav class="nav">
-    <a href="index.html" class="nav__logo">
-      <img src=".//photos/logonav.png" alt="Logo" class="nav__logo-img">
-    </a>
-    <ul class="nav__menu">
-      <li class="nav__menu-item"><a href="index.html">الصفحه الرئسية</a></li>
-      <li class="nav__menu-item"><a href="index.html#best-food">الماكولات</a>
-        <ul class="nav__submenu">
-          <li class="nav__submenu-item"><a href="chicken.html">Chicken</a></li>
-          <li class="nav__submenu-item"><a href="beef.html">Beef</a></li>
-          <li class="nav__submenu-item"><a href="seafood.html">Seafood</a></li>
-        </ul>
-      </li>
-      <li class="nav__menu-item"><a href="index.html#best-drinks">المشروبات</a>
-        <ul class="nav__submenu">
-          <li class="nav__submenu-item"><a href="index.html#coffee">Coffee</a></li>
-          <li class="nav__submenu-item"><a href="index.html#soft-drinks">Soft Drinks</a></li>
-          <li class="nav__submenu-item"><a href="index.html#juices">Juices</a></li>
-        </ul>
-      </li>
-      <li class="nav__menu-item"><a href="index.html#best-drinks">الحلويات و الايسكريم</a>
-        <ul class="nav__submenu">
-          <li class="nav__submenu-item"><a href="index.html#coffee">Coffee</a></li>
-          <li class="nav__submenu-item"><a href="index.html#soft-drinks">Soft Drinks</a></li>
-          <li class="nav__submenu-item"><a href="index.html#juices">Juices</a></li>
-        </ul>
-      </li>
-      <li class="nav__menu-item"><a href="index.html#about">الشوربه</a></li>
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+/* Logo Styles */
+.nav__logo {
+  display: flex;
+  align-items: center; /* Center the logo vertically */
+  margin-right: 5px; /* Add some spacing between the logo and other navbar items */
+}
 
-      <li class="nav__menu-item"><a href="index.html#about">السلطات</a></li>
+.nav__logo-img {
+  width: 65px; /* Adjust the width to make the logo very small */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 30px; /* Optional: Set a max height to ensure it doesn't get too large */
+}
 
-      <li class="nav__menu-item"><a href="index.html#about">عننا</a></li>
-      <li class="nav__menu-item"><a href="index.html#contact"> تواصل معنا</a></li>
-    </ul>
-  </nav>
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-  <!-- Home Section -->
-  <section id="home" class="home-section">
-    <div class="container">
-      <h1>Welcome to Casper Restaurant & Café</h1>
-      <h1>Experience the best food and drinks in town.</h1>
-    </div>
-  </section>
+/* Navigation Styles */
+.nav {
+  background: #000000;
+  width: 100%; /* Full width */
+  height: 10%;
+  margin: 0 auto;
+  color: #f0f0f0;
+  border-radius: 12px;
+  padding: 8px 10px; /* Adjusted padding */
+  position: fixed; /* Fixed position */
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top */
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #0022ff, 0 0 30px #0022ff, 0 0 40px #0022ff;
+}
 
-  <!-- Best Food Section -->
-  <section id="best-food" class="menu-section">
-    <div class="container">
-      <h2 class="section-title">Best Food</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="box">
-            <h3 class="name">Fried Chicken</h3>
-            <button class="btn btn-primary quick-view" 
-                    data-name="Fried Chicken" 
-                    data-description="Crispy and flavorful fried chicken made with our special recipe." 
-                    data-price="120 L.E" 
-                    data-image="./photos/Fried_Chicken-removebg-preview.png">
-              Quick View
-            </button>
-            <div class="circle"></div>
-            <img class="product" src="./photos/Fried_Chicken-removebg-preview.png" alt="Fried Chicken">
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="box">
-            <h3 class="name">Beef Steak</h3>
-            <button class="btn btn-primary quick-view" 
-                    data-name="Beef Steak" 
-                    data-description="Juicy grilled beef steak cooked to perfection." 
-                    data-price="300 L.E" 
-                    data-image=".//photos/Beef Steak.png">
-              Quick View
-            </button>
-            <div class="circle"></div>
-            <img class="product" src=".//photos/Beef Steak.png" alt="Beef Steak">
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="box">
-            <h3 class="name">Sushi</h3>
-            <button class="btn btn-primary quick-view" 
-                    data-name="Seafood Platter" 
-                    data-description="A variety of fresh seafood served with dipping sauces." 
-                    data-price="$400 L.E" 
-                    data-image=".//photos/Sushi.png">
-              Quick View
-            </button>
-            <div class="circle"></div>
-            <img class="product" src=".//photos/Sushi.png" alt="Seafood Platter">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+.nav a {
+  display: block;
+  line-height: inherit;
+  cursor: pointer;
+}
 
-  <!-- Best Drinks Section -->
-  <section id="best-drinks" class="menu-section">
-    <div class="container">
-      <h2 class="section-title">Best Drinks</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="box">
-            <h3 class="name">Latte</h3>
-            <button class="btn btn-primary quick-view" 
-                    data-name="Latte" 
-                    data-description="Rich and creamy latte made with freshly brewed coffee." 
-                    data-price="80 L.E" 
-                    data-image="./photos/Latte.png">
-              Quick View
-            </button>
-            <div class="circle"></div>
-            <img class="product" src=".//photos/Latte.png" alt="Latte">
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="box">
-            <h3 class="name">Soft Drink</h3>
-            <button class="btn btn-primary quick-view" 
-                    data-name="Soft Drink" 
-                    data-description="Refreshing fizzy drink available in multiple flavors." 
-                    data-price="60 L.E" 
-                    data-image=".//photos/Soft Drink.png">
-              Quick View
-            </button>
-            <div class="circle"></div>
-            <img class="product" src=".//photos/Soft Drink.png" alt="Soft Drink">
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="box">
-            <h3 class="name">Fresh Juice</h3>
-            <button class="btn btn-primary quick-view" 
-                    data-name="Fresh Juice" 
-                    data-description="Freshly squeezed fruit juice packed with natural goodness." 
-                    data-price="80 L.E" 
-                    data-image=".//photos/Fresh Juice.png">
-              Quick View
-            </button>
-            <div class="circle"></div>
-            <img class="product" src=".//photos/Fresh Juice.png" alt="Fresh Juice">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+.nav__menu {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center items */
+  flex-wrap: nowrap; /* Prevent wrapping to keep items in one line */
+  gap: 2px; /* Add spacing between menu items */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
 
-  <!-- Quick View Modal -->
-  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="quickViewTitle"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img id="quickViewImage" src="" alt="" class="img-fluid mb-3">
-          <p id="quickViewDescription"></p>
-          <p><strong>Price:</strong> <span id="quickViewPrice"></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
+.nav__menu::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+}
 
-  <!-- About Us Section -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <h2> : About Us</h2>
-      
-      <p>Welcome to <strong>Casper Restaurant & Café</strong>, كاسبر هو إدارة مصرية كاملة
-        وهو أول مكان تنبع منه فكرة كاسبر الشخصية الكرتونية المحبوبة التي اقتبسها بعد ذلك برندات أخري و تأسس أول فرع كاسبر عام ١٩٩٧ في الهرم و كان ثاني فرع في شارع جامعة الدول العربية بالمهندسين و تم العمل بعد ذلك علي قطاع الاندية من خلال أعرق الأندية النادي الأهلي فرع الجيزة ونادي الصيد فرع الدقي وظل كاسبر به لمدة ٢٠ عاما.</p>
-      <p>وعام ٢٠٠٠ تم حصول فرع جامعة الدول العربية علي شهادة تقدير من جمعية الذواقة العالمية وفي عام ٢٠١٤ تم حصول كاسبر علي شهادة من الإدارة الصحية بنادي الصيد إنه من أنظف المطاعم . التي تقدم خدماتها لأعضاء النادي و حصل كاسبر علي شهادة تقدير من رئيس نادي الصيد لتوريد الوجبات الصحية للرياضيين وفرع كاسبر للأندية متخصص في أكلات
-        .</p>
-      <p> أما فروع كاسبر الخارجية متخصصة في المذاق المصري الأصيل و كاسبر يستخدم أجود أنواع الخامات في طهي اللحوم والدجاج وجميع الخامات من كبرى الشركات الموثوق بها في مجال الأطعمة وحرصنا أن تكون الأسعار في كاسبر في متناول الجميع مع تحقيق هامش ربح قليل مقارنة بباقي المطاعم و الاماكن الأخري التي تقدم خدمات مشابهة لخدماتنا
-        و شعارنا إرضاء العميل</p>
-    </div>
-  </section>
+.nav__menu {
+  font-weight: 500;
+  text-transform: uppercase;
+}
 
-  <!-- Contact Us Section -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>We'd love to hear from you! Reach out to us for reservations, inquiries, or just to say hello.</p>
-      <div class="contact-info">
-        <strong>:Address:</strong><p>أكتوبر - محطة شل أوت - حدائق الأهرام</p>
-        <p><strong>Phone:</strong> +201111224224</p>
-      </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3454.0278025747925!2d31.03192507494475!3d30.03606021896896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDAyJzA5LjgiTiAzMcKwMDInMDQuMiJF!5e0!3m2!1sen!2seg!4v1737730963648!5m2!1sen!2seg" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="line"></div>
+.nav__menu-item {
+  margin: 0;
+  padding: 10px; /* Reduce padding for a more compact look */
+  position: relative;
+  font-size: 1rem; /* Reduce font size for smaller text */
+  flex-shrink: 0; /* Prevent items from shrinking */
+}
 
-      <div class="contact-info">
-        <strong>: Address</strong><p>الدقي - محطة هل أوت - وزارة الزراعة</p>
-        <p><strong>Phone:</strong> +201111223223</p>
-      </div>
+.nav__menu-item a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.8224815381827!2d31.211128199999994!3d30.041950300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584197305a671b%3A0x1a097f29a4183b36!2zQ2FzcGVyLdmD2KfYs9io2LE!5e0!3m2!1sen!2seg!4v1737730885823!5m2!1sen!2seg" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="social-media">
-        <a href="https://www.instagram.com/casper.res1997?igsh=MXBqZm00anZlZzF3NA==" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/share/15nBEEdAEu/?mibextid=wwXIfr" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
-      </div>
-    </div>
-  </section>
+.nav__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  border-top: 2px solid #fff; /* White border between menu items and submenus */
+  border-radius: 8px;
+  z-index: 1000; /* Ensure submenu appears above other elements */
+}
 
-  <div class="line2"></div>
+.nav__submenu-item {
+  padding: 10px;
+  font-size: 0.9rem; /* Reduce font size for submenu items */
+}
 
-  <div class="end">
-    <p dir="ltr">© 2024, Casper Powered by <a href="https://wa.me/201234567890" target="_blank" class="highlight-link">Mostafa</a></p>
-  </div>
+/* Hover effect on anchor tags */
+.nav__menu-item:hover > a {
+  border: 2px solid #fff; /* White border on hover */
+  padding: 5px;
+  border-radius: 5px;
+}
 
-  <!-- Scripts -->
-  <script src="https://assets.codepen.io/7773162/vanilla-tilt.min.js"></script>
-  <script>
-   
-    VanillaTilt.init(document.querySelectorAll(".box"), {
-      max: 15,
-      speed: 300,
-      easing: "cubic-bezier(.03,.98,.52,.99)",
-      scale: 1.05,
-    });
-  </script>
-  <script src="main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const quickViewButtons = document.querySelectorAll('.quick-view');
-      const modal = new bootstrap.Modal(document.getElementById('quickViewModal'));
-      const modalTitle = document.getElementById('quickViewTitle');
-      const modalDescription = document.getElementById('quickViewDescription');
-      const modalImage = document.getElementById('quickViewImage');
-      const modalPrice = document.getElementById('quickViewPrice');
+/* Show submenu on hover */
+.nav__menu-item:hover .nav__submenu {
+  display: block;
+}
 
-      quickViewButtons.forEach(button => {
-        button.addEventListener('click', function () {
-          const name = button.getAttribute('data-name');
-          const description = button.getAttribute('data-description');
-          const price = button.getAttribute('data-price');
-          const image = button.getAttribute('data-image');
+/* Style the links inside the submenu */
+.nav__submenu-item a {
+  color: #fff;
+}
 
-          modalTitle.textContent = name;
-          modalDescription.textContent = description;
-          modalPrice.textContent = price;
-          modalImage.src = image;
+/* Hover effect on submenu anchor tags */
+.nav__submenu-item:hover > a {
+  border: 2px solid transparent; /* Transparent border on hover */
+  padding: 2.5px;
+  border-radius: 5px;
+}
 
-          modal.show();
-        });
-      });
-    });
-  </script>
-</body>
-</html>
+/* Add a subtle transition effect */
+.nav__menu-item a, .nav__submenu-item a {
+  transition: border-color 1s ease-in;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav__menu {
+    flex-direction: row; /* Keep items horizontal */
+    align-items: center; /* Center items */
+    gap: 0.5px; /* Reduce gap for smaller screens */
+  }
+
+  .nav__menu-item {
+    padding: 8px; /* Reduce padding for smaller screens */
+    font-size: 0.8rem; /* Further reduce font size for smaller screens */
+  }
+
+  .nav__submenu {
+    position: absolute; /* Submenu appears below the item */
+    display: none;
+    background: #444; /* Slightly lighter background for submenu */
+    border-radius: 10px; /* Keep border radius */
+  }
+
+  .nav__menu-item:hover .nav__submenu {
+    display: block; /* Show submenu on hover */
+  }
+}
+
+/* Home Section */
+.home-section {
+  height: 150vh;
+  background: url('.//photos/Rozzis\ -\ Picture\ gallery\ 5.jpg') no-repeat center center/cover;
+  display: flex;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00; 
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+/* Menu Sections */
+.menu-section {
+  padding: 60px 0;
+}
+
+.modal.fade{
+  background-color: #000;
+}
+
+/* About Us Section */
+.about-section {
+  padding: 60px 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    border-radius: 10px; /* Keep border radius */
+  background: #0e0d0d; /* Light background */
+  text-align: center;
+  color: #e96601;
+   font-size: 3rem;
+  font-weight: bold;
+  color: #888; /* اللون الأساسي للنص */
+  text-shadow: 1px 1px 6px #888, /* ظل أبيض خفيف لجعل الحواف مشرقة */
+               -2px -5px 5px #888, /* ظل داخلي أبيض للأعلى */
+               -9px -8px -5px #888; /* ظل داخلي رمادي للأسفل */
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contact Us Section */
+.contact-section {
+  padding: 60px 0;
+  background: #000411; /* White background */
+    border-radius: 10px; /* Keep border radius */
+    
+  text-align: center;
+  color: #888;
+  justify-content: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-link {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #6f00ff; /* Dark text */
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ffe600; 
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Quick View Modal Text Color */
+#quickViewModal .modal-content {
+  color: #000; /* Black text for quick view */
+}
+
+/* Ensure quick view styles do not apply to mobile views */
+@media (max-width: 768px) {
+  .quickview {
+    color: inherit; /* Inherit the color from parent */
+  }
+}
+
+/* author: https://codepen.io/krautgti/pen/VwXNRYE
+KrautGTI
+ */
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,900&display=swap");
+ * {
+   margin: 0;
+   padding: 0;
+   font-family: "Poppins", sans-serif;
+ }
+
+ :root {
+   --main-bg: #ff0000;
+   --box-bg: #0a0a0a;
+   --name-color: #ffffff;
+   --card-bg-text: #ff0000;
+ }
+
+ .container {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 1200px;
+   transform-style: preserve-3d;
+ }
+
+ .container .box {
+   position: relative;
+   width: 300px;
+   height: 400px;
+   margin: 40px;
+   background: var(--box-bg);
+   border-radius: 20px;
+   transform-style: preserve-3d;
+ }
+
+ .container .box::before {
+   content: "CASPER";
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   font-size: 3em;
+   font-weight: 900;
+   color: var(--card-bg-text);
+   font-style: italic;
+   opacity: 0.5;
+   transition: 0.5s;
+   color: #8f8b8b;
+ }
+
+ .container .box::after {
+   content: "CAFE";
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   font-size: 3em;
+   font-weight: 900;
+   color: var(--card-bg-text);
+   font-style: italic;
+   opacity: 0.5;
+   transition: 0.5s;
+   color: #8f8b8b;
+ }
+
+ .container .box:hover::after,
+ .container .box:hover::before {
+   opacity: 0.04;
+ }
+
+ .container .box .name {
+   position: absolute;
+   top: 0;
+   left: 0;
+   text-align: center;
+   color: var(--name-color);
+   width: 100%;
+   transform-style: preserve-3d;
+   transform: translate3d(0, 0, 75px);
+   transition: 0.5s;
+   opacity: 0;
+   z-index: 10;
+ }
+
+ .container .box:hover .name {
+   top: 40px;
+   opacity: 1;
+ }
+
+ .container .box .buy {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform-style: preserve-3d;
+   transform: translate3d(0, 0, 75px);
+   color: #fff;
+   background: #333;
+   padding: 10px 25px;
+   border-radius: 30px;
+   text-decoration: none;
+   transition: 0.5s;
+   opacity: 0;
+   z-index: 10;
+ }
+
+ .container .box:hover .buy {
+   bottom: 30px;
+   opacity: 1;
+ }
+
+ .container .box .circle {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   transition: 0.5s;
+   background: #ffffff;
+   transform-style: preserve-3d;
+   z-index: 10;
+   opacity: 1;
+   transform: translate3d(-50%, -50%, 0px);
+ }
+
+ .container .box:hover .circle {
+   transform: translate3d(-50%, -50%, 35px);
+ }
+
+ .container .box .product {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   max-width: 300px;
+   transition: 0.5s;
+   z-index: 11;
+   transform-style: preserve-3d;
+   transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
+ }
+
+ .container .box:hover .product {
+   transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+ }
+
+ .container .box:nth-child(1) .circle,
+ .container .box:nth-child(1) .buy {
+   background: #d0ff00;
+ }
+
+ .container .box:nth-child(2) .circle,
+ .container .box:nth-child(2) .buy {
+   background: #1DA3C3;
+ }
+
+ .container .box:nth-child(3) .circle,
+ .container .box:nth-child(3) .buy {
+   background: #eb0e2f;
+ }
+
+ .mode-switch {
+   background-color: transparent;
+   border: none;
+   padding: 0;
+   color: var(--name-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .mode-switch.active .moon {
+   fill: var(--name-color);
+ }
+
+ .line {
+   width: 80%;
+   height: 2px;
+   background-color: #000000;
+   margin: 20px auto;
+ }
+
+ .line2 {
+   width: 100%;
+   height: 2px;
+   background-color: #ffffff;
+   margin: 40px auto;
+ }
+
+ .end {
+   color: rgb(216, 19, 19);
+ }
+
+ .highlight-link {
+   color: blue;
+   text-decoration: none;
+ }
+
+ .highlight-link:hover {
+   color: rgb(200, 203, 5);
+ }
+
+ /* Responsive Media Queries */
+ @media (max-width: 1024px) {
+   .container {
+     width: 100%;
+     padding: 0 20px;
+   }
+
+   .container .box {
+     width: 45%;
+     margin: 20px;
+   }
+
+   .container .box::before {
+     font-size: 4em;
+   }
+
+   .container .box::after {
+     font-size: 3em;
+   }
+
+   .container .box .circle {
+     width: 150px;
+     height: 150px;
+   }
+
+   .container .box .product {
+     max-width: 80%;
+   }
+ }
+
+ @media (max-width: 768px) {
+   .container .box {
+     width: 48%; /* عرض العناصر بنسبة 48% للسماح بعنصرين في الصف الواحد */
+     margin: 1%; /* تباعد صغير بين العناصر */
+   }
+
+   .container .box::before {
+     font-size: 2em; /* تعديل حجم الخط */
+   }
+
+   .container .box::after {
+     font-size: 1.5em; /* تعديل حجم الخط */
+   }
+
+   .container .box .circle {
+     width: 100px; /* تعديل حجم الدائرة */
+     height: 100px; /* تعديل حجم الدائرة */
+   }
+
+   .container .box .product {
+     max-width: 80%; /* تعديل حجم الصورة */
+   }
+ }
+
+ @media (max-width: 480px) {
+   .container .box {
+     width: 48%; /* عرض العناصر بنسبة 48% للسماح بعنصرين في الصف الواحد */
+     margin: 1%; /* تباعد صغير بين العناصر */
+   }
+
+   .container .box::before {
+     font-size: 1.5em; /* تعديل حجم الخط */
+   }
+
+   .container .box::after {
+     font-size: 1em; /* تعديل حجم الخط */
+   }
+
+   .container .box .circle {
+     width: 80px; /* تعديل حجم الدائرة */
+     height: 80px; /* تعديل حجم الدائرة */
+   }
+
+   .container .box .product {
+     max-width: 70%; /* تعديل حجم الصورة */
+   }
+ }
