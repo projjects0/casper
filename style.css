@@ -62,7 +62,7 @@ nav ul {
   overflow-x: auto; /* Enable horizontal scrolling */
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
   scrollbar-width: none; /* Hide scrollbar in Firefox */
-  padding-left: -350px; /* إضافة حشو إلى اليسار لتحريك النص */
+  padding-left: 20px; /* إضافة حشو إلى اليسار لتحريك النص */
 
 }
 
@@ -138,25 +138,31 @@ nav ul {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .nav__menu {
-    flex-direction: row; /* Keep items horizontal */
-    align-items: center; /* Center items */
-    gap: 0.5px; /* Reduce gap for smaller screens */
+    justify-content: flex-start; /* بدء العناصر من اليسار */
+    padding-left: 10px; /* تقليل الحشو الداخلي */
+    gap: 5px; /* تقليل المسافة بين العناصر */
+    overflow-x: auto; /* تمكين التمرير الأفقي */
+    -webkit-overflow-scrolling: touch; /* تمرير سلس على الأجهزة المحمولة */
   }
 
   .nav__menu-item {
-    padding: 8px; /* Reduce padding for smaller screens */
-    font-size: 0.8rem; /* Further reduce font size for smaller screens */
+    padding: 5px; /* تقليل الحشو */
+    font-size: 0.8rem; /* تقليل حجم الخط */
+    min-width: max-content; /* منع العناصر من الانضغاط */
+  }
+
+  .nav__menu-item a {
+    white-space: nowrap; /* منع التفاف النص */
   }
 
   .nav__submenu {
-    position: absolute; /* Submenu appears below the item */
-    display: none;
-    background: #444; /* Slightly lighter background for submenu */
-    border-radius: 10px; /* Keep border radius */
+    position: absolute; /* إظهار القائمة الفرعية أسفل العنصر */
+    background: #444; /* لون خلفية مختلف للقائمة الفرعية */
+    border-radius: 10px; /* زوايا مدورة */
   }
 
   .nav__menu-item:hover .nav__submenu {
-    display: block; /* Show submenu on hover */
+    display: block; /* إظهار القائمة الفرعية عند التمرير */
   }
 }
 
