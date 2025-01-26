@@ -10,17 +10,16 @@ body {
 *, *:before, *:after {
   box-sizing: border-box;
 }
-/* Logo Styles */
 .nav__logo {
   display: flex;
-  align-items: center; /* Center the logo vertically */
-  margin-right: 5px; /* Add some spacing between the logo and other navbar items */
+  align-items: center; /* توسيط الشعار عموديًا */
+  margin-right: 5px; /* إضافة مسافة بين الشعار والعناصر الأخرى */
 }
 
 .nav__logo-img {
-  width: 65px; /* Adjust the width to make the logo very small */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 30px; /* Optional: Set a max height to ensure it doesn't get too large */
+  width: 65px; /* تعديل عرض الشعار */
+  height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+  max-height: 30px; /* تحديد أقصى ارتفاع */
 }
 
 nav ul {
@@ -30,18 +29,18 @@ nav ul {
   margin-bottom: 0;
 }
 
-/* Navigation Styles */
+/* أنماط التنقل */
 .nav {
   background: #000000;
-  width: 100%; /* Full width */
+  width: 100%; /* عرض كامل */
   height: 10%;
   margin: 0 auto;
   color: #f0f0f0;
   border-radius: 12px;
-  padding: 8px 10px; /* Adjusted padding */
-  position: fixed; /* Fixed position */
+  padding: 8px 10px; /* تعديل الحشو */
+  position: fixed; /* تثبيت位置 */
   top: 0;
-  z-index: 1000; /* Ensure it stays on top */
+  z-index: 1000; /* التأكد من بقائه في المقدمة */
   text-shadow: 0 0 10px #ff0000, 0 0 20px #0022ff, 0 0 30px #0022ff, 0 0 40px #0022ff;
 }
 
@@ -55,16 +54,18 @@ nav ul {
   list-style: none;
   margin: 0;
   display: flex;
-  justify-content: center; /* Center items */
-  flex-wrap: nowrap; /* Prevent wrapping to keep items in one line */
-  gap: 2px; /* Add spacing between menu items */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  justify-content: center; /* توسيط العناصر */
+  flex-wrap: nowrap; /* منع العناصر من الانتقال إلى سطر جديد */
+  gap: 2px; /* إضافة مسافة بين العناصر */
+  overflow-x: auto; /* تمكين التمرير الأفقي إذا كانت العناصر تتجاوز العرض */
+  -webkit-overflow-scrolling: touch; /* تمرير سلس على الأجهزة المحمولة */
+  scrollbar-width: none; /* إخفاء شريط التمرير في Firefox */
+  padding-right: 100px; /* إضافة حشو إلى اليسار لتحريك النص */
+
 }
 
 .nav__menu::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+  display: none; /* إخفاء شريط التمرير في متصفحات WebKit (Chrome, Safari) */
 }
 
 .nav__menu {
@@ -74,17 +75,17 @@ nav ul {
 
 .nav__menu-item {
   margin: 0;
-  padding: 10px; /* Reduce padding for a more compact look */
+  padding: 10px; /* تقليل الحشو */
   position: relative;
-  font-size: 1rem; /* Reduce font size for smaller text */
-  flex-shrink: 0; /* Prevent items from shrinking */
+  font-size: 1rem; /* تقليل حجم الخط */
+  flex-shrink: 0; /* منع العناصر من الانكماش */
 }
 
 .nav__menu-item a {
   color: #fff;
   text-decoration: none;
   display: block;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap; /* منع النص من التفاف إلى سطر جديد */
 }
 
 .nav__submenu {
@@ -93,41 +94,40 @@ nav ul {
   top: 100%;
   left: 0;
   background: #333;
-  border-top: 2px solid #fff; /* White border between menu items and submenus */
+  border-top: 2px solid #fff; /* إضافة حدود بيضاء */
   border-radius: 8px;
-  z-index: 1000; /* Ensure submenu appears above other elements */
 }
 
 .nav__submenu-item {
   padding: 10px;
-  font-size: 0.9rem; /* Reduce font size for submenu items */
+  font-size: 0.9rem; /* تقليل حجم الخط للعناصر الفرعية */
 }
 
-/* Hover effect on anchor tags */
+/* تأثير التمرير على الروابط */
 .nav__menu-item:hover > a {
-  border: 2px solid #fff; /* White border on hover */
+  border: 2px solid #fff; /* إضافة حدود بيضاء عند التمرير */
   padding: 5px;
   border-radius: 5px;
 }
 
-/* Show submenu on hover */
+/* إظهار القائمة الفرعية عند التمرير */
 .nav__menu-item:hover .nav__submenu {
   display: block;
 }
 
-/* Style the links inside the submenu */
+/* تنسيق الروابط داخل القائمة الفرعية */
 .nav__submenu-item a {
   color: #fff;
 }
 
-/* Hover effect on submenu anchor tags */
+/* تأثير التمرير على روابط القائمة الفرعية */
 .nav__submenu-item:hover > a {
-  border: 2px solid transparent; /* Transparent border on hover */
+  border: 2px solid transparent; /* حدود شفافة عند التمرير */
   padding: 2.5px;
   border-radius: 5px;
 }
 
-/* Add a subtle transition effect */
+/* إضافة تأثير انتقالي */
 .nav__menu-item a, .nav__submenu-item a {
   transition: border-color 1s ease-in;
 }
@@ -286,14 +286,16 @@ KrautGTI
    padding: 0;
    font-family: "Poppins", sans-serif;
  }
-
+ 
  :root {
    --main-bg: #ff0000;
    --box-bg: #0a0a0a;
    --name-color: #ffffff;
    --card-bg-text: #ff0000;
  }
-
+ 
+ 
+ 
  .container {
    position: relative;
    display: flex;
@@ -303,7 +305,7 @@ KrautGTI
    width: 1200px;
    transform-style: preserve-3d;
  }
-
+ 
  .container .box {
    position: relative;
    width: 300px;
@@ -313,7 +315,7 @@ KrautGTI
    border-radius: 20px;
    transform-style: preserve-3d;
  }
-
+ 
  .container .box::before {
    content: "CASPER";
    position: absolute;
@@ -327,7 +329,7 @@ KrautGTI
    transition: 0.5s;
    color: #8f8b8b;
  }
-
+ 
  .container .box::after {
    content: "CAFE";
    position: absolute;
@@ -340,13 +342,14 @@ KrautGTI
    opacity: 0.5;
    transition: 0.5s;
    color: #8f8b8b;
- }
 
+ }
+ 
  .container .box:hover::after,
  .container .box:hover::before {
    opacity: 0.04;
  }
-
+ 
  .container .box .name {
    position: absolute;
    top: 0;
@@ -360,12 +363,12 @@ KrautGTI
    opacity: 0;
    z-index: 10;
  }
-
+ 
  .container .box:hover .name {
    top: 40px;
    opacity: 1;
  }
-
+ 
  .container .box .buy {
    position: absolute;
    bottom: 0;
@@ -381,12 +384,12 @@ KrautGTI
    opacity: 0;
    z-index: 10;
  }
-
+ 
  .container .box:hover .buy {
    bottom: 30px;
    opacity: 1;
  }
-
+ 
  .container .box .circle {
    position: absolute;
    top: 50%;
@@ -401,11 +404,22 @@ KrautGTI
    opacity: 1;
    transform: translate3d(-50%, -50%, 0px);
  }
-
+ 
  .container .box:hover .circle {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   transition: 0.5s;
+   background: #ffffff;
+   transform-style: preserve-3d;
+   z-index: 10;
+   opacity: 1;
    transform: translate3d(-50%, -50%, 35px);
  }
-
+ 
  .container .box .product {
    position: absolute;
    top: 50%;
@@ -413,29 +427,30 @@ KrautGTI
    max-width: 300px;
    transition: 0.5s;
    z-index: 11;
+   transition: 0.5s;
    transform-style: preserve-3d;
    transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
  }
-
+ 
  .container .box:hover .product {
    transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
  }
-
+ 
  .container .box:nth-child(1) .circle,
  .container .box:nth-child(1) .buy {
    background: #d0ff00;
  }
-
+ 
  .container .box:nth-child(2) .circle,
  .container .box:nth-child(2) .buy {
    background: #1DA3C3;
  }
-
+ 
  .container .box:nth-child(3) .circle,
  .container .box:nth-child(3) .buy {
    background: #eb0e2f;
  }
-
+ 
  .mode-switch {
    background-color: transparent;
    border: none;
@@ -445,112 +460,110 @@ KrautGTI
    justify-content: center;
    align-items: center;
  }
-
+ 
  .mode-switch.active .moon {
    fill: var(--name-color);
  }
-
  .line {
-   width: 80%;
-   height: 2px;
-   background-color: #000000;
-   margin: 20px auto;
- }
+  width: 80%; /* Adjust the width of the line */
+  height: 2px; /* Line thickness */
+  background-color: #000000; /* Line color */
+  margin: 20px auto; /* Center the line and add spacing */
+}
+.line2 {
+  width: 100%; /* Adjust the width of the line */
+  height: 2px; /* Line thickness */
+  background-color: #ffffff; /* Line color */
+  margin: 40px auto; /* Center the line and add spacing */
+}
 
- .line2 {
-   width: 100%;
-   height: 2px;
-   background-color: #ffffff;
-   margin: 40px auto;
- }
 
- .end {
-   color: rgb(216, 19, 19);
- }
+.end {
+  color: rgb(216, 19, 19);
+}
+.highlight-link {
+  color: blue; /* Change to your desired color */
+  text-decoration: none; /* Optional: Removes underline */
+}
+.highlight-link:hover {
+  color: rgb(200, 203, 5); /* Optional: Change color on hover */
+}
 
- .highlight-link {
-   color: blue;
-   text-decoration: none;
- }
+/* ================================================= */
+/* Responsive Media Queries (Added Below) */
+/* ================================================= */
 
- .highlight-link:hover {
-   color: rgb(200, 203, 5);
- }
+/* For Tablets and Smaller Laptops */
+@media (max-width: 1024px) {
+  .container {
+    width: 100%; /* Full width for smaller screens */
+    padding: 0 20px; /* Add padding for better spacing */
+  }
 
- /* Responsive Media Queries */
- @media (max-width: 1024px) {
-   .container {
-     width: 100%;
-     padding: 0 20px;
-   }
+  .container .box {
+    width: 45%; /* Two boxes per row */
+    margin: 20px; /* Reduce margin for better spacing */
+  }
 
-   .container .box {
-     width: 45%;
-     margin: 20px;
-   }
+  .container .box::before {
+    font-size: 4em; /* Reduce font size for smaller screens */
+  }
 
-   .container .box::before {
-     font-size: 4em;
-   }
+  .container .box::after {
+    font-size: 3em; /* Reduce font size for smaller screens */
+  }
 
-   .container .box::after {
-     font-size: 3em;
-   }
+  .container .box .circle {
+    width: 150px; /* Reduce circle size */
+    height: 150px; /* Reduce circle size */
+  }
 
-   .container .box .circle {
-     width: 150px;
-     height: 150px;
-   }
+  .container .box .product {
+    max-width: 80%; /* Adjust product image size */
+  }
+}
 
-   .container .box .product {
-     max-width: 80%;
-   }
- }
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .container .box {
+    width: 100%; /* One box per row */
+    margin: 10px 0; /* Reduce margin for better spacing */
+  }
 
- @media (max-width: 768px) {
-   .container .box {
-     width: 48%; /* عرض العناصر بنسبة 48% للسماح بعنصرين في الصف الواحد */
-     margin: 1%; /* تباعد صغير بين العناصر */
-   }
+  .container .box::before {
+    font-size: 3em; /* Further reduce font size */
+  }
 
-   .container .box::before {
-     font-size: 2em; /* تعديل حجم الخط */
-   }
+  .container .box::after {
+    font-size: 2em; /* Further reduce font size */
+  }
 
-   .container .box::after {
-     font-size: 1.5em; /* تعديل حجم الخط */
-   }
+  .container .box .circle {
+    width: 120px; /* Further reduce circle size */
+    height: 120px; /* Further reduce circle size */
+  }
 
-   .container .box .circle {
-     width: 100px; /* تعديل حجم الدائرة */
-     height: 100px; /* تعديل حجم الدائرة */
-   }
+  .container .box .product {
+    max-width: 70%; /* Further adjust product image size */
+  }
+}
 
-   .container .box .product {
-     max-width: 80%; /* تعديل حجم الصورة */
-   }
- }
+/* For Very Small Mobile Devices */
+@media (max-width: 480px) {
+  .container .box::before {
+    font-size: 2.5em; /* Further reduce font size */
+  }
 
- @media (max-width: 480px) {
-   .container .box {
-     width: 48%; /* عرض العناصر بنسبة 48% للسماح بعنصرين في الصف الواحد */
-     margin: 1%; /* تباعد صغير بين العناصر */
-   }
+  .container .box::after {
+    font-size: 1.5em; /* Further reduce font size */
+  }
 
-   .container .box::before {
-     font-size: 1.5em; /* تعديل حجم الخط */
-   }
+  .container .box .circle {
+    width: 100px; /* Further reduce circle size */
+    height: 100px; /* Further reduce circle size */
+  }
 
-   .container .box::after {
-     font-size: 1em; /* تعديل حجم الخط */
-   }
-
-   .container .box .circle {
-     width: 80px; /* تعديل حجم الدائرة */
-     height: 80px; /* تعديل حجم الدائرة */
-   }
-
-   .container .box .product {
-     max-width: 70%; /* تعديل حجم الصورة */
-   }
- }
+  .container .box .product {
+    max-width: 60%; /* Further adjust product image size */
+  }
+}
