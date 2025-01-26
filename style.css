@@ -456,8 +456,11 @@ KrautGTI
  .line {
    width: 80%;
    height: 2px;
-   background-color: #000000;
+   background-color: #6f00ff;
    margin: 20px auto;
+   justify-content: center; /* Center items */
+   align-items: center; /* Center the logo vertically */
+
  }
 
  .line2 {
