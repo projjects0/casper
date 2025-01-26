@@ -1,4 +1,4 @@
-/* General Styles */
+ /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -60,7 +60,7 @@ nav ul {
   overflow-x: auto; /* تمكين التمرير الأفقي إذا كانت العناصر تتجاوز العرض */
   -webkit-overflow-scrolling: touch; /* تمرير سلس على الأجهزة المحمولة */
   scrollbar-width: none; /* إخفاء شريط التمرير في Firefox */
-  padding-right: 100px; /* إضافة حشو إلى اليسار لتحريك النص */
+  padding-right: 320px; /* إضافة حشو إلى اليسار لتحريك النص */
 
 }
 
@@ -111,7 +111,7 @@ nav ul {
 }
 
 /* إظهار القائمة الفرعية عند التمرير */
-.nav__menu-item:hover .nav__submenu {
+.nav_menu-item:hover .nav_submenu {
   display: block;
 }
 
@@ -128,7 +128,7 @@ nav ul {
 }
 
 /* إضافة تأثير انتقالي */
-.nav__menu-item a, .nav__submenu-item a {
+.nav_menu-item a, .nav_submenu-item a {
   transition: border-color 1s ease-in;
 }
 
@@ -152,7 +152,7 @@ nav ul {
     border-radius: 10px; /* Keep border radius */
   }
 
-  .nav__menu-item:hover .nav__submenu {
+  .nav_menu-item:hover .nav_submenu {
     display: block; /* Show submenu on hover */
   }
 }
@@ -273,198 +273,195 @@ nav ul {
 /* Ensure quick view styles do not apply to mobile views */
 @media (max-width: 768px) {
   .quickview {
-    color: inherit; /* Inherit the color from parent */
-  }
+    color: inherit; /* Inherit the color from parent */
+  }
 }
 
 /* author: https://codepen.io/krautgti/pen/VwXNRYE
 KrautGTI
- */
- @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,900&display=swap");
- * {
-   margin: 0;
-   padding: 0;
-   font-family: "Poppins", sans-serif;
- }
- 
- :root {
-   --main-bg: #ff0000;
-   --box-bg: #0a0a0a;
-   --name-color: #ffffff;
-   --card-bg-text: #ff0000;
- }
- 
- 
- 
- .container {
-   position: relative;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   width: 1200px;
-   transform-style: preserve-3d;
- }
- 
- .container .box {
-   position: relative;
-   width: 300px;
-   height: 400px;
-   margin: 40px;
-   background: var(--box-bg);
-   border-radius: 20px;
-   transform-style: preserve-3d;
- }
- 
- .container .box::before {
-   content: "CASPER";
-   position: absolute;
-   top: 20px;
-   left: 20px;
-   font-size: 3em;
-   font-weight: 900;
-   color: var(--card-bg-text);
-   font-style: italic;
-   opacity: 0.5;
-   transition: 0.5s;
-   color: #8f8b8b;
- }
- 
- .container .box::after {
-   content: "CAFE";
-   position: absolute;
-   bottom: 20px;
-   right: 20px;
-   font-size: 3em;
-   font-weight: 900;
-   color: var(--card-bg-text);
-   font-style: italic;
-   opacity: 0.5;
-   transition: 0.5s;
-   color: #8f8b8b;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
 
- }
- 
- .container .box:hover::after,
- .container .box:hover::before {
-   opacity: 0.04;
- }
- 
- .container .box .name {
-   position: absolute;
-   top: 0;
-   left: 0;
-   text-align: center;
-   color: var(--name-color);
-   width: 100%;
-   transform-style: preserve-3d;
-   transform: translate3d(0, 0, 75px);
-   transition: 0.5s;
-   opacity: 0;
-   z-index: 10;
- }
- 
- .container .box:hover .name {
-   top: 40px;
-   opacity: 1;
- }
- 
- .container .box .buy {
-   position: absolute;
-   bottom: 0;
-   left: 50%;
-   transform-style: preserve-3d;
-   transform: translate3d(0, 0, 75px);
-   color: #fff;
-   background: #333;
-   padding: 10px 25px;
-   border-radius: 30px;
-   text-decoration: none;
-   transition: 0.5s;
-   opacity: 0;
-   z-index: 10;
- }
- 
- .container .box:hover .buy {
-   bottom: 30px;
-   opacity: 1;
- }
- 
- .container .box .circle {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   width: 200px;
-   height: 200px;
-   border-radius: 50%;
-   transition: 0.5s;
-   background: #ffffff;
-   transform-style: preserve-3d;
-   z-index: 10;
-   opacity: 1;
-   transform: translate3d(-50%, -50%, 0px);
- }
- 
- .container .box:hover .circle {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   width: 200px;
-   height: 200px;
-   border-radius: 50%;
-   transition: 0.5s;
-   background: #ffffff;
-   transform-style: preserve-3d;
-   z-index: 10;
-   opacity: 1;
-   transform: translate3d(-50%, -50%, 35px);
- }
- 
- .container .box .product {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   max-width: 300px;
-   transition: 0.5s;
-   z-index: 11;
-   transition: 0.5s;
-   transform-style: preserve-3d;
-   transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
- }
- 
- .container .box:hover .product {
-   transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
- }
- 
- .container .box:nth-child(1) .circle,
- .container .box:nth-child(1) .buy {
-   background: #d0ff00;
- }
- 
- .container .box:nth-child(2) .circle,
- .container .box:nth-child(2) .buy {
-   background: #1DA3C3;
- }
- 
- .container .box:nth-child(3) .circle,
- .container .box:nth-child(3) .buy {
-   background: #eb0e2f;
- }
- 
- .mode-switch {
-   background-color: transparent;
-   border: none;
-   padding: 0;
-   color: var(--name-color);
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
- 
- .mode-switch.active .moon {
-   fill: var(--name-color);
- }
- .line {
+:root {
+  --main-bg: #ff0000;
+  --box-bg: #0a0a0a;
+  --name-color: #ffffff;
+  --card-bg-text: #ff0000;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1200px;
+  transform-style: preserve-3d;
+}
+
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  background: var(--box-bg);
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+
+.container .box::before {
+  content: "CASPER";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 3em;
+  font-weight: 900;
+  color: var(--card-bg-text);
+  font-style: italic;
+  opacity: 0.5;
+  transition: 0.5s;
+  color: #8f8b8b;
+}
+
+.container .box::after {
+  content: "CAFE";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 3em;
+  font-weight: 900;
+  color: var(--card-bg-text);
+  font-style: italic;
+  opacity: 0.5;
+  transition: 0.5s;
+  color: #8f8b8b;
+}
+
+.container .box:hover::after,
+.container .box:hover::before {
+  opacity: 0.04;
+}
+
+.container .box .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: var(--name-color);
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.container .box:hover .name {
+  top: 40px;
+  opacity: 1;
+}
+
+.container .box .buy {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  color: #fff;
+  background: #333;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.container .box:hover .buy {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.container .box .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #ffffff;
+  transform-style: preserve-3d;
+  z-index: 10;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0px);
+}
+
+.container .box:hover .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #ffffff;
+  transform-style: preserve-3d;
+  z-index: 10;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 35px);
+}
+
+.container .box .product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 300px;
+  transition: 0.5s;
+  z-index: 11;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
+}
+
+.container .box:hover .product {
+  transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+}
+
+.container .box:nth-child(1) .circle,
+.container .box:nth-child(1) .buy {
+  background: #d0ff00;
+}
+
+.container .box:nth-child(2) .circle,
+.container .box:nth-child(2) .buy {
+  background: #1DA3C3;
+}
+
+.container .box:nth-child(3) .circle,
+.container .box:nth-child(3) .buy {
+  background: #eb0e2f;
+}
+
+.mode-switch {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: var(--name-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mode-switch.active .moon {
+  fill: var(--name-color);
+}
+.line {
   width: 80%; /* Adjust the width of the line */
   height: 2px; /* Line thickness */
   background-color: #000000; /* Line color */
@@ -476,7 +473,6 @@ KrautGTI
   background-color: #ffffff; /* Line color */
   margin: 40px auto; /* Center the line and add spacing */
 }
-
 
 .end {
   color: rgb(216, 19, 19);
