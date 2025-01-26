@@ -62,7 +62,7 @@ nav ul {
   overflow-x: auto; /* Enable horizontal scrolling */
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
   scrollbar-width: none; /* Hide scrollbar in Firefox */
-  padding-left: 30px; /* إضافة حشو إلى اليسار لتحريك النص */
+  padding-left: 100px; /* إضافة حشو إلى اليسار لتحريك النص */
 
 }
 
