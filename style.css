@@ -7,6 +7,55 @@ body {
   color: #ffffff !important; /* Set all text to white */
 }
 
+
+
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.welcome-text {
+  color: white;
+  font-size: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.welcome-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -168,8 +217,9 @@ nav ul {
 
 /* Home Section */
 .home-section {
-  height: 150vh;
-  background: url('.//photos/Rozzis\ -\ Picture\ gallery\ 5.jpg') no-repeat center center/cover;
+  height: 100vh;
+  width:100%;
+  background: url('.//photos/background1.png') no-repeat center center/cover;
   display: flex;
   text-shadow: 0 0 10px #ff0000, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00; 
   align-items: center;
@@ -203,6 +253,30 @@ nav ul {
   text-shadow: 1px 1px 6px #888, /* ظل أبيض خفيف لجعل الحواف مشرقة */
                -2px -5px 5px #888, /* ظل داخلي أبيض للأعلى */
                -9px -8px -5px #888; /* ظل داخلي رمادي للأسفل */
+}
+
+/* Quick View Button Styles */
+.btn.btn-primary.quick-view {
+  background-color: #ff0000 !important; /* Red color */
+  border-color: #ff0000 !important;
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+
+.btn.btn-primary.quick-view:hover,
+.btn.btn-primary.quick-view:focus,
+.btn.btn-primary.quick-view:active {
+  background-color: #FFD700 !important; /* Gold color */
+  border-color: #FFD700 !important;
+  color: #000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* For touch feedback */
+.btn.btn-primary.quick-view:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
 }
 
 .about-section h2 {
@@ -314,13 +388,14 @@ KrautGTI
  }
 
  .container .box {
-   position: relative;
-   width: 300px;
-   height: 400px;
-   margin: 40px;
-   background: var(--box-bg);
-   border-radius: 20px;
-   transform-style: preserve-3d;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  background: var(--box-bg);
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  overflow: hidden; /* Ensures nothing overflows */
  }
 
  .container .box::before {
@@ -392,39 +467,54 @@ KrautGTI
  }
 
  .container .box:hover .buy {
-   bottom: 30px;
-   opacity: 1;
- }
+  bottom: 30px;
+  opacity: 1;
+}
 
  .container .box .circle {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   width: 200px;
-   height: 200px;
-   border-radius: 50%;
-   transition: 0.5s;
-   background: #ffffff;
-   transform-style: preserve-3d;
-   z-index: 10;
-   opacity: 1;
-   transform: translate3d(-50%, -50%, 0px);
- }
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #ffffff;
+  transform-style: preserve-3d;
+  z-index: 10;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0);
+}
  .container .box:hover .circle {
-   transform: translate3d(-50%, -50%, 35px);
- }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #ffffff;
+  transform-style: preserve-3d;
+  z-index: 10;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 35px);
+  
+}
+.container .box:hover .circle {
+  transform: translate3d(-50%, -50%, 35px); /* Add some Z index depth on hover */
+}
 
- .container .box .product {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   max-width: 300px;
-   transition: 0.5s;
-   z-index: 11;
-   transform-style: preserve-3d;
-   transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
- }
+.container .box .product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 300px;
+  transition: 0.5s;
+  z-index: 11;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
+}
 
  .container .box:hover .product {
    transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
@@ -432,17 +522,17 @@ KrautGTI
 
  .container .box:nth-child(1) .circle,
  .container .box:nth-child(1) .buy {
-   background: #d0ff00;
+   background: #ff0000;
  }
 
  .container .box:nth-child(2) .circle,
  .container .box:nth-child(2) .buy {
-   background: #1DA3C3;
+   background: #ff0000;
  }
 
  .container .box:nth-child(3) .circle,
  .container .box:nth-child(3) .buy {
-   background: #eb0e2f;
+   background: #ff0000;
  }
 
  .mode-switch {
@@ -459,37 +549,9 @@ KrautGTI
    fill: var(--name-color);
  }
 
- .line {
-   width: 80%;
-   height: 2px;
-   background-color: #6f00ff;
-   margin: 20px auto;
-   justify-content: center; /* Center items */
-   align-items: center; /* Center the logo vertically */
+ 
 
- }
-
- .line2 {
-   width: 100%;
-   height: 2px;
-   background-color: #ffffff;
-   margin: 40px auto;
- }
-
- .end {
-   color: rgb(216, 19, 19);
- }
-
- .highlight-link {
-   color: blue;
-   text-decoration: none;
- }
-
- .highlight-link:hover {
-   color: rgb(200, 203, 5);
- }
-
- /* Responsive Media Queries */
+/* Media query for laptop and larger screens */
  @media (max-width: 1024px) {
    .container {
      width: 100%;
@@ -497,8 +559,8 @@ KrautGTI
    }
 
    .container .box {
-     width: 45%;
-     margin: 20px;
+    width: 400px; /* Adjust size for larger screens */
+    height: 400px;
    }
 
    .container .box::before {
@@ -510,12 +572,12 @@ KrautGTI
    }
 
    .container .box .circle {
-     width: 150px;
-     height: 150px;
+    width: 250px;
+    height: 250px;
    }
 
    .container .box .product {
-     max-width: 80%;
+    max-width: 350px;
    }
  }
 
@@ -565,4 +627,58 @@ KrautGTI
    .container .box .product {
      max-width: 70%;
    }
- }         
+ }       
+ 
+ 
+
+
+
+
+
+
+
+
+ .line {
+  width: 80%;
+  height: 2px;
+  background-color: #6f00ff;
+  margin: 20px auto;
+  justify-content: center; /* Center items */
+  align-items: center; /* Center the logo vertically */
+
+}
+
+.line2 {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 40px auto;
+}
+
+.end {
+  color: rgb(216, 19, 19);
+}
+
+.highlight-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.highlight-link:hover {
+  color: rgb(200, 203, 5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
