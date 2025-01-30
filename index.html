@@ -1,18 +1,27 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title> Casper Restaurant & Café Menu</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
  
       <link rel="stylesheet" href="style.css">
 
-         <link rel="icon" type="image/x-icon" href=".//photos/logo2.png">
-
+      <link rel="icon" type="image/x-icon" href=".//photos/logo2.png">
 </head>
 <body>
+
+
+  <div class="overlay" id="overlay">
+</div>
+
+
+
+  
   <!-- Navigation Bar -->
   <nav class="nav">
     <a href="index.html" class="nav__logo">
@@ -21,7 +30,7 @@
     <ul class="nav__menu">
       <li class="nav__menu-item"><a href="index.html">الصفحه الرئسية</a></li>
       
-      <li class="nav__menu-item"><a href="index.html#best-food">الماكولات</a>
+      <li class="nav__menu-item"><a href="makolat.html"></a><a href="index.html#best-food">الماكولات</a>
         <ul class="nav__submenu">
           <li class="nav__submenu-item"><a href="chicken.html">الباستا</a></li>
           <li class="nav__submenu-item"><a href="beef.html">الاطباق الرئسية</a></li>
@@ -30,33 +39,88 @@
 
         </ul>
       </li>
-      <li class="nav__menu-item"><a href="index.html"></a><a href="index.html#best-drinks">المشروبات</a>
+      <li class="nav__menu-item"><a href="mashrobat.html"></a><a href="index.html#best-drinks">المشروبات</a>
                 <ul class="nav__submenu">
           <li class="nav__submenu-item"><a href="index.html#coffee">المشروبات الساخنه</a></li>
           <li class="nav__submenu-item"><a href="index.html#soft-drinks">المشروبات الساقعه </a></li>
           <li class="nav__submenu-item"><a href="index.html#juices">العصائر</a></li>
         </ul>
       </li>
-      <li class="nav__menu-item"><a href="index.html#best-drinks">الحلويات و الايسكريم</a>
+      <li class="nav__menu-item"><a href="elhlwyatwicecream.html">الحلويات و الايسكريم</a>
         <ul class="nav__submenu">
           <li class="nav__submenu-item"><a href="index.html#coffee">Coffee</a></li>
           <li class="nav__submenu-item"><a href="index.html#soft-drinks">Soft Drinks</a></li>
           <li class="nav__submenu-item"><a href="index.html#juices">Juices</a></li>
         </ul>
       </li>
-      <li class="nav__menu-item"><a href="index.html#about">الشوربه</a></li>
+      <li class="nav__menu-item"><a href="elshorba.html">الشوربه</a></li>
   
-      <li class="nav__menu-item"><a href="index.html#about"> والزبادي السلطات</a></li>
-  
+      <li class="nav__menu-item"><a href="elzabadywsalda.html">السلطات و الزبادي</a></li>
+      <li class="nav__menu-item"><a href="index.html#about">العروض</a></li>
+
       <li class="nav__menu-item"><a href="index.html#about">عننا</a></li>
       <li class="nav__menu-item"><a href="index.html#contact"> تواصل معنا</a></li>
     </ul>
   </nav>
+
+  
   <!-- Home Section -->
   <section id="home" class="home-section">
     <div class="container">
-      <h1>Welcome to Casper Restaurant & Café</h1>
-      <h1>Experience the best food and drinks in town.</h1>
+      <h1  dir="ltr">Welcome to Casper Restaurant & Café</h1>
+      <h1   dir="ltr">Experience the best food and drinks in town.</h1>
+    </div>
+  </section>
+
+  
+  <!-- Best offers Section -->
+  <section id="best-food" class="menu-section">
+    <div class="container">
+      <h2 class="section-title">العروض المميزه - Best offers</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="box">
+            <h3 class="name">الباستا - Pasta</h3>
+            <button class="btn btn-primary quick-view" 
+                    data-name="Fried Chicken" 
+                    data-description=" الباستا بينّا بصوص الطماطم الأحمر. المكرونة مطهية تمامًا ومغطاة بصوص غني بالطماطم مع لمسة من الثوم والأعشاب، ومزينة بجبنة مبشورة وبقدونس طازج. الطماطم الكرزية تضيف لونًا جميلًا ونكهة مميزة. الطبق متوازن في الطعم وشكله يشهي، مناسب كوجبة غداء أو عشاء خفيفة.." 
+                    data-price="120 L.E" 
+                    data-image=".//photos/pasta-removebg-preview.png">
+              Quick View
+            </button>
+            <div class="circle"></div>
+            <img class="product" src=".//photos/pasta-removebg-.png" alt="Fried Chicken">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <h3 class="name">كفتيه مشويه - Kofta</h3>
+            <button class="btn btn-primary quick-view" 
+                    data-name="Beef Steak" 
+                    data-description=" كفته مشوي على الفحم، مُقدم على أسياخ خشبية مع مجموعة من الخضروات المشوية زي الطماطم والبصل، ومزين بأوراق البقدونس الطازجة. الكباب متبل بتوابل لذيذة ومطهي بعناية للحصول على طعم مدخن ونكهة غنية. الطبق بيُقدم على لوح خشب، مما يضيف لمسة تقليدية وجذابة للمظهر العام. مناسب كوجبة رئيسية شهية." 
+                    data-price="300 L.E" 
+                    data-image=".//photos/kofta-removebg-preview.png">
+              Quick View
+            </button>
+            <div class="circle"></div>
+            <img class="product" src=".//photos/kofta--preview.png" alt="Beef Steak">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <h3 class="name">فراخ مشويه - Grilled chicken</h3>
+            <button class="btn btn-primary quick-view" 
+                    data-name="Seafood Platter" 
+                    data-description="نصف دجاجه متبله بخلطة طبليه مصريه ومشويه على الفحم." 
+                    data-price="400 L.E" 
+                    data-image=".//photos/chikeninfahm.png">
+              Quick View
+            </button>
+            <div class="circle"></div>
+            <img class="product" src=".//photos/.png" alt="Seafood Platter">
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -223,7 +287,7 @@
   <div class="line2"></div>
 
   <div class="end">
-    <p dir="ltr">© 2024, Casper Powered by <a href="https://wa.me/201234567890" target="_blank" class="highlight-link">Mostafa</a></p>
+    <p dir="ltr">© 2025, Casper Powered by <a href="https://wa.me/201234567890" target="_blank" class="highlight-link">Mostafa</a></p>
   </div>
 
   <!-- Scripts -->
@@ -239,6 +303,15 @@
   <script src="main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    
+    setTimeout(() => {
+            document.getElementById("overlay").classList.add("hidden");
+            document.getElementById("welcomeText").classList.add("show");
+        }, 1000);
+
+        
+
+
     document.addEventListener('DOMContentLoaded', function () {
       const quickViewButtons = document.querySelectorAll('.quick-view');
       const modal = new bootstrap.Modal(document.getElementById('quickViewModal'));
@@ -264,6 +337,6 @@
       });
     });
   </script>
-  </script>
+  
 </body>
 </html>
