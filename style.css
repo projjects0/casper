@@ -41,21 +41,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -214,6 +199,7 @@ nav ul {
     display: block; /* إظهار القائمة الفرعية عند التمرير */
   }
 }
+
 
 /* Home Section */
 .home-section {
