@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Casper Restaurant & Café Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+      <link rel="stylesheet" href="style.css">
+
+      <link rel="icon" type="image/x-icon" href=".//photos/logo2.png">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <img src=".//photos/logonav.png" alt="Logo" class="nav__logo-img">
+    </a>
+    <ul class="nav__menu">
+      <li class="nav__menu-item"><a href="index.html">الصفحه الرئسية</a></li>
+      
+      <li class="nav__menu-item"><a href="makolat.html"></a><a href="index.html#best-food">الماكولات</a>
+        <ul class="nav__submenu">
+          <li class="nav__submenu-item"><a href="chicken.html">الباستا</a></li>
+          <li class="nav__submenu-item"><a href="beef.html">الاطباق الرئسية</a></li>
+          <li class="nav__submenu-item"><a href="seafood.html">الساندوتشات</a></li>
+          <li class="nav__submenu-item"><a href="seafood.html">الافطار و المقبلات</a></li>
+
+        </ul>
+      </li>
+      <li class="nav__menu-item"><a href="mashrobat.html"></a><a href="index.html#best-drinks">المشروبات</a>
+                <ul class="nav__submenu">
+          <li class="nav__submenu-item"><a href="index.html#coffee">المشروبات الساخنه</a></li>
+          <li class="nav__submenu-item"><a href="index.html#soft-drinks">المشروبات الساقعه </a></li>
+          <li class="nav__submenu-item"><a href="index.html#juices">العصائر</a></li>
+        </ul>
+      </li>
+      <li class="nav__menu-item"><a href="elhlwyatwicecream.html">الحلويات و الايسكريم</a>
+        <ul class="nav__submenu">
+          <li class="nav__submenu-item"><a href="index.html#coffee">Coffee</a></li>
+          <li class="nav__submenu-item"><a href="index.html#soft-drinks">Soft Drinks</a></li>
+          <li class="nav__submenu-item"><a href="index.html#juices">Juices</a></li>
+        </ul>
+      </li>
+      <li class="nav__menu-item"><a href="elshorba.html">الشوربه</a></li>
+  
+      <li class="nav__menu-item"><a href="elzabadywsalda.html">السلطات و الزبادي</a></li>
+  
+      <li class="nav__menu-item"><a href="index.html#about">عننا</a></li>
+      <li class="nav__menu-item"><a href="index.html#contact"> تواصل معنا</a></li>
+    </ul>
+  </nav>
+  
+
+  <!-- Best Food Section -->
+  <section id="best-food" class="menu-section">
+    <div class="container">
+        <h2 class="section-title">الماكولات</h2>
+        <div class="row">
+            <!-- Item 1: Pasta -->
+            <div class="col-md-4">
+              <div class="box">
+                  <h3 class="name">الباستا</h3>
+                  <button class="btn btn-primary quick-view" 
+                          data-name="الباستا" 
+                          data-description="الباستا بينّا بصوص الطماطم الأحمر. المكرونة مطهية تمامًا ومغطاة بصوص غني بالطماطم مع لمسة من الثوم والأعشاب، ومزينة بجبنة مبشورة وبقدونس طازج. الطماطم الكرزية تضيف لونًا جميلًا ونكهة مميزة. الطبق متوازن في الطعم وشكله يشهي، مناسب كوجبة غداء أو عشاء خفيفة." 
+                          data-price="120 L.E" 
+                          data-image=".//photos/pasta-removebg-preview.png">
+                      Quick View
+                  </button>
+                  <div class="circle"></div>
+                  <a href="pasta.html">
+                      <img class="product" src=".//photos/pasta-removebg-preview.png" alt="الباستا">
+                  </a>
+              </div>
+          </div>
+            <!-- Item 2: Kofta -->
+            <div class="col-md-4">
+                <div class="box">
+                    <h3 class="name">الاطباق الرئسية</h3>
+                    <button class="btn btn-primary quick-view" 
+                            data-name="كفته مشوي" 
+                            data-description="كفته مشوي على الفحم، مُقدم على أسياخ خشبية مع مجموعة من الخضروات المشوية زي الطماطم والبصل، ومزين بأوراق البقدونس الطازجة. الكباب متبل بتوابل لذيذة ومطهي بعناية للحصول على طعم مدخن ونكهة غنية. الطبق بيُقدم على لوح خشب، مما يضيف لمسة تقليدية وجذابة للمظهر العام. مناسب كوجبة رئيسية شهية." 
+                            data-price="300 L.E" 
+                            data-image=".//photos/kofta-removebg-preview.png">
+                        Quick View
+                    </button>
+                    <div class="circle"></div>
+                    <a href="pasta.html">
+
+                    <img class="product" src=".//photos/kofta-removebg-preview.png" alt="كفته مشوي">
+                    </a>             
+     </div>
+            </div>
+
+            <!-- Item 3: Grilled Chicken -->
+            <div class="col-md-4">
+                <div class="box">
+                    <h3 class="name">الساندوتشات</h3>
+                    <button class="btn btn-primary quick-view" 
+                            data-name="نصف دجاجه مشويه" 
+                            data-description="نصف دجاجه متبله بخلطة طبليه مصريه ومشويه على الفحم." 
+                            data-price="400 L.E" 
+                            data-image=".//photos/Sandwich.png">
+                        Quick View
+                    </button>
+                    <div class="circle"></div>
+                    <a href="pasta.html">
+
+                      <img class="product" src=".//photos/Sandwich.png" alt="نصف دجاجه مشويه">
+                      
+                      </a>             
+                </div>
+            </div>
+
+            <!-- Item 4: Pizza -->
+            <!-- <div class="col-md-4">
+                <div class="box">
+                    <h3 class="name">البيتزا</h3>
+                    <button class="btn btn-primary quick-view" 
+                            data-name="بيتزا بيتزا" 
+                            data-description="بيتزا إيطالية تقليدية مع صلصة الطماطم والجبنة الموزاريلا الطازجة، مغطاة بالبيبروني والفطر والزيتون." 
+                            data-price="200 L.E" 
+                            data-image=".//photos/pizza.png">
+                        Quick View
+                    </button>
+                    <div class="circle"></div>
+                    <img class="product" src=".//photos/pizza.png" alt="بيتزا">
+                </div>
+            </div> -->
+
+            <!-- Item 5: Burger -->
+            <!-- <div class="col-md-4">
+                <div class="box">
+                    <h3 class="name">البرجر</h3>
+                    <button class="btn btn-primary quick-view" 
+                            data-name="برجر لحم" 
+                            data-description="برجر لحم بقري مشوي مع جبنة شيدر، خس، طماطم، بصل، ومخلل، مع صلصة خاصة." 
+                            data-price="150 L.E" 
+                            data-image=".//photos/burger.png">
+                        Quick View
+                    </button>
+                    <div class="circle"></div>
+                    <img class="product" src=".//photos/burger.png" alt="برجر">
+                </div>
+            </div> -->
+
+            <!-- Item 6: Salad -->
+            <!-- <div class="col-md-4">
+                <div class="box">
+                    <h3 class="name">السلطات</h3>
+                    <button class="btn btn-primary quick-view" 
+                            data-name="سلطة سيزر" 
+                            data-description="سلطة سيزر مع خس الرومين، كروتونات، جبنة بارميزان، وصلصة سيزر الكلاسيكية." 
+                            data-price="80 L.E" 
+                            data-image=".//photos/salad.png">
+                        Quick View
+                    </button>
+                    <div class="circle"></div>
+                    <img class="product" src=".//photos/salad.png" alt="سلطة">
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+  <!-- Quick View Modal -->
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="quickViewTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="quickViewImage" src="" alt="" class="img-fluid mb-3">
+          <p id="quickViewDescription"></p>
+          <p><strong>Price:</strong> <span id="quickViewPrice"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="https://assets.codepen.io/7773162/vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+      max: 15,
+      speed: 300,
+      easing: "cubic-bezier(.03,.98,.52,.99)",
+      scale: 1.05,
+    });
+  </script>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const quickViewButtons = document.querySelectorAll('.quick-view');
+      const modal = new bootstrap.Modal(document.getElementById('quickViewModal'));
+      const modalTitle = document.getElementById('quickViewTitle');
+      const modalDescription = document.getElementById('quickViewDescription');
+      const modalImage = document.getElementById('quickViewImage');
+      const modalPrice = document.getElementById('quickViewPrice');
+
+      quickViewButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const name = button.getAttribute('data-name');
+          const description = button.getAttribute('data-description');
+          const price = button.getAttribute('data-price');
+          const image = button.getAttribute('data-image');
+
+          modalTitle.textContent = name;
+          modalDescription.textContent = description;
+          modalPrice.textContent = price;
+          modalImage.src = image;
+
+          modal.show();
+        });
+      });
+    });
+  </script>
+</body>
+</html>
