@@ -9,6 +9,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="./photos/logo2.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Rakkas&display=swap"
+  rel="stylesheet">
 </head>
 <body>
   <div class="overlay" id="overlay"></div>
@@ -44,7 +48,7 @@
       </li>
       <li class="nav__menu-item"><a href="elshorba.html">الشوربه</a></li>
       <li class="nav__menu-item"><a href="elzabadywsalda.html">السلطات و الزبادي</a></li>
-      <li class="nav__menu-item"><a href="index.html#about">العروض</a></li>
+      <li class="nav__menu-item"><a href="index.html#offers">العروض</a></li>
       <li class="nav__menu-item"><a href="index.html#about">عننا</a></li>
       <li class="nav__menu-item"><a href="index.html#contact"> تواصل معنا</a></li>
     </ul>
@@ -62,50 +66,54 @@
   <div id="true-focus-container"></div>
 
   <!-- Best offers Section -->
-  <section id="best-food" class="menu-section">
+  <section id="offers" class="menu-section">
     <div class="container">
       <h2 class="section-title">العروض المميزه - Best offers</h2>
       <div class="row">
         <div class="col-md-4">
           <div class="box">
-            <h3 class="name">الباستا - Pasta</h3>
+            <h3 class="name"> عـــــــــرض الـــشـــبـــح </h3>
             <button class="btn btn-primary quick-view" 
                     data-name="Fried Chicken" 
-                    data-description=" الباستا بينّا بصوص الطماطم الأحمر. المكرونة مطهية تمامًا ومغطاة بصوص غني بالطماطم مع لمسة من الثوم والأعشاب، ومزينة بجبنة مبشورة وبقدونس طازج. الطماطم الكرزية تضيف لونًا جميلًا ونكهة مميزة. الطبق متوازن في الطعم وشكله يشهي، مناسب كوجبة غداء أو عشاء خفيفة.." 
+                    data-description="عرض الشبح عباره عن ساندوتشين كبده اسكراني بي توابل خاصه و مميزه" 
                     data-price="120 L.E" 
-                    data-image="./photos/pasta-removebg-preview.png">
-              Quick View
-            </button>
+                    data-image="photos/3rdshabh.svg">
+بـــص بصــه 👀     
+       </button>
             <div class="circle"></div>
-            <img class="product" src="./photos/pasta-removebg-preview.png" alt="Fried Chicken">
+            <img class="product" src="photos/3rdshabh.svg" alt="Fried Chicken">
           </div>
         </div>
         <div class="col-md-4">
           <div class="box">
-            <h3 class="name">كفتيه مشويه - Kofta</h3>
+            <h3 class="name">بــــوكس الـــصــحــــاب</h3>
             <button class="btn btn-primary quick-view" 
                     data-name="Beef Steak" 
-                    data-description=" كفته مشوي على الفحم، مُقدم على أسياخ خشبية مع مجموعة من الخضروات المشوية زي الطماطم والبصل، ومزين بأوراق البقدونس الطازجة. الكباب متبل بتوابل لذيذة ومطهي بعناية للحصول على طعم مدخن ونكهة غنية. الطبق بيُقدم على لوح خشب، مما يضيف لمسة تقليدية وجذابة للمظهر العام. مناسب كوجبة رئيسية شهية." 
+                    data-description=" عرض الصحاب عباره عن ساندوتشين كبده و سجق انت و صاحبك " 
                     data-price="300 L.E" 
-                    data-image="./photos/kofta-removebg-preview.png">
-              Quick View
+                    data-image="photos/3shlaa.svg">
+بـــص بصــه 👀
             </button>
             <div class="circle"></div>
-            <img class="product" src="./photos/kofta-removebg-preview.png" alt="Beef Steak">
+            <div class="rbackground">
+            <img class="product" src="photos/3shlaa.svg" alt="Beef Steak">
+          </div>
+
+          
           </div>
         </div>
         <div class="col-md-4">
           <div class="box">
-            <h3 class="name">فراخ مشويه - Grilled chicken</h3>
-            <button class="btn btn-primary quick-view" 
+            <h3 class="name">  عـــــــــرض التـــوفير</h3>
+            <button  class="btn btn-primary quick-view" 
                     data-name="Seafood Platter" 
-                    data-description="نصف دجاجه متبله بخلطة طبليه مصريه ومشويه على الفحم." 
+                    data-description="اشتري 3 ساندوتشات و احصل علي ال4 مجانا" 
                     data-price="400 L.E" 
-                    data-image="./photos/chikeninfahm.png">
-              Quick View
+                    data-image="photos/3twferr.svg">
+بـــص بصــه 👀
             </button>
             <div class="circle"></div>
-            <img class="product" src="./photos/chikeninfahm.png" alt="Seafood Platter">
+            <img class="product" src="photos/3twferr.svg" alt="Seafood Platter">
           </div>
         </div>
       </div>
@@ -125,7 +133,7 @@
                     data-description=" الباستا بينّا بصوص الطماطم الأحمر. المكرونة مطهية تمامًا ومغطاة بصوص غني بالطماطم مع لمسة من الثوم والأعشاب، ومزينة بجبنة مبشورة وبقدونس طازج. الطماطم الكرزية تضيف لونًا جميلًا ونكهة مميزة. الطبق متوازن في الطعم وشكله يشهي، مناسب كوجبة غداء أو عشاء خفيفة.." 
                     data-price="120 L.E" 
                     data-image="./photos/pasta-removebg-preview.png">
-              Quick View
+بـــص بصــه 👀
             </button>
             <div class="circle"></div>
             <img class="product" src="./photos/pasta-removebg-preview.png" alt="Fried Chicken">
@@ -139,7 +147,7 @@
                     data-description=" كفته مشوي على الفحم، مُقدم على أسياخ خشبية مع مجموعة من الخضروات المشوية زي الطماطم والبصل، ومزين بأوراق البقدونس الطازجة. الكباب متبل بتوابل لذيذة ومطهي بعناية للحصول على طعم مدخن ونكهة غنية. الطبق بيُقدم على لوح خشب، مما يضيف لمسة تقليدية وجذابة للمظهر العام. مناسب كوجبة رئيسية شهية." 
                     data-price="300 L.E" 
                     data-image="./photos/kofta-removebg-preview.png">
-              Quick View
+بـــص بصــه 👀
             </button>
             <div class="circle"></div>
             <img class="product" src="./photos/kofta-removebg-preview.png" alt="Beef Steak">
@@ -153,7 +161,7 @@
                     data-description="نصف دجاجه متبله بخلطة طبليه مصريه ومشويه على الفحم." 
                     data-price="400 L.E" 
                     data-image="./photos/chikeninfahm.png">
-              Quick View
+بـــص بصــه 👀
             </button>
             <div class="circle"></div>
             <img class="product" src="./photos/chikeninfahm.png" alt="Seafood Platter">
@@ -176,7 +184,7 @@
                     data-description="Rich and creamy latte made with freshly brewed coffee." 
                     data-price="30 L.E" 
                     data-image="./photos/Latte.png">
-              Quick View
+بـــص بصــه 👀
             </button>
             <div class="circle"></div>
             <img class="product" src="./photos/Latte.png" alt="Latte">
@@ -190,7 +198,7 @@
                     data-description="Refreshing fizzy drink available in multiple flavors." 
                     data-price="60 L.E" 
                     data-image="./photos/Soft Drink.png">
-              Quick View
+بـــص بصــه 👀
             </button>
             <div class="circle"></div>
             <img class="product" src=".//photos/Soft Drink.png" alt="Soft Drink">
@@ -204,7 +212,7 @@
                     data-description="Freshly squeezed fruit juice packed with natural goodness." 
                     data-price="65 L.E" 
                     data-image=".//photos/Fresh Juice.png">
-              Quick View
+بـــص بصــه 👀
             </button>
             <div class="circle"></div>
             <img class="product" src=".//photos/Fresh Juice.png" alt="Fresh Juice">
@@ -292,6 +300,24 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
     setTimeout(() => {
             document.getElementById("overlay").classList.add("hidden");
             document.getElementById("welcomeText").classList.add("show");
