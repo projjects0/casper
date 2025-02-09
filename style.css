@@ -214,7 +214,7 @@ nav ul {
 .home-section {
   height: 100vh;
   width:100%;
-  background: url('photos/backgroundd22.png') no-repeat center center/cover;
+  background: url('photos/backgroundd1.svg') no-repeat center center/cover;
  background-color: #0b1f58;
   display: flex;
   text-shadow: 0 0 10px #0739c3, 0 0 20px #0739c3, 0 0 30px #ffffff, 0 0 40px #ffffff; 
@@ -228,6 +228,9 @@ nav ul {
 .menu-section {
   padding: 60px 0;
 }
+
+
+
 
 .modal.fade{
   background-color: #000;
@@ -435,6 +438,8 @@ KrautGTI
     padding: 0 20px;
   }
 
+  
+
   .container .box {
     width: 400px;
     /* Adjust size for larger screens */
@@ -528,9 +533,7 @@ KrautGTI
    font-size: 3rem;
   font-weight: bold;
   color: #888; /* اللون الأساسي للنص */
-  text-shadow: 1px 1px 6px #888, /* ظل أبيض خفيف لجعل الحواف مشرقة */
-               -2px -5px 5px #888, /* ظل داخلي أبيض للأعلى */
-               -9px -8px -5px #888; /* ظل داخلي رمادي للأسفل */
+  
 }
 
 /* Quick View Button Styles */
@@ -569,15 +572,18 @@ KrautGTI
   margin: 0 auto;
 }
 
-/* Contact Us Section */
 .contact-section {
-  padding: 60px 0;
-  background: #000411; /* White background */
-    border-radius: 10px; /* Keep border radius */
-    
+  padding: 60px 20px;
+  background: #000411;
+  border-radius: 10px;
   text-align: center;
   color: #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .contact-section h2 {
@@ -594,6 +600,7 @@ KrautGTI
 
 .contact-info {
   margin-top: 20px;
+  text-align: center;
 }
 
 .contact-info p {
@@ -603,86 +610,103 @@ KrautGTI
 
 .social-media {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .social-link {
   font-size: 1.5rem;
   margin: 0 10px;
-  color: #6f00ff; /* Dark text */
+  color: #6f00ff;
   transition: color 0.3s ease;
 }
 
 .social-link:hover {
-  color: #ffe600; 
+  color: #ffe600;
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .fade-in {
   animation: fadeIn 1s ease-in;
 }
 
-/* Quick View Modal Text Color */
-#quickViewModal .modal-content {
-  color: #000; /* Black text for quick view */
-}
-
-/* Ensure quick view styles do not apply to mobile views */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .quickview {
-    color: inherit; /* Inherit the color from parent */
+  .contact-section {
+    padding: 40px 20px;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  .contact-section p {
+    font-size: 1rem;
+  }
+
+  .social-link {
+    font-size: 1.2rem;
+    margin: 0 5px;
+  }
+
+  .line {
+    width: 100%;
+    margin: 15px auto;
   }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact-section {
+    padding: 50px 30px;
+  }
 
+  .contact-section h2 {
+    font-size: 2.2rem;
+  }
 
+  .contact-section p {
+    font-size: 1rem;
+  }
 
+  .social-link {
+    font-size: 1.4rem;
+    margin: 0 8px;
+  }
 
+  .line {
+    width: 100%;
+    margin: 18px auto;
+  }
+}
 
-
- .line {
+.line {
   width: 80%;
   height: 2px;
   background-color: #6f00ff;
   margin: 20px auto;
-  justify-content: center; /* Center items */
-  align-items: center; /* Center the logo vertically */
-
 }
 
-.line2 {
+/* Additional styles for iframe */
+iframe {
   width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-  margin: 40px auto;
+  height: 300px;
+  margin-top: 20px;
 }
 
-.end {
-  color: rgb(216, 19, 19);
+/* Ensure quick view styles do not apply to mobile views */
+#quickViewModal .modal-content {
+  color: #000;
 }
-
-.highlight-link {
-  color: blue;
-  text-decoration: none;
-}
-
-.highlight-link:hover {
-  color: rgb(200, 203, 5);
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
