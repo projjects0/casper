@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Casper Restaurant & Café Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style2.css">
+
+    <link rel="icon" type="image/x-icon" href=".//photos/logo2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Rakkas&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <a href="index.html" class="nav__logo">
+            <img src=".//photos/logonav.png" alt="Logo" class="nav__logo-img">
+        </a>
+        <ul class="nav__menu">
+            <li class="nav__menu-item"><a href="index.html">الصفحه الرئسية</a></li>
+
+            <li class="nav__menu-item"><a href="index.html#best-food">الماكولات</a>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a href="pasta.html">الباستا</a></li>
+                    <li class="nav__submenu-item"><a href="beef.html">الاطباق الرئسية</a></li>
+                    <li class="nav__submenu-item"><a href="seafood.html">الساندوتشات</a></li>
+                    <li class="nav__submenu-item"><a href="seafood.html">الافطار و المقبلات</a></li>
+
+                </ul>
+            </li>
+            <li class="nav__menu-item"><a href="mashrobat.html"></a><a href="index.html#best-drinks">المشروبات</a>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a href="index.html#coffee">المشروبات الساخنه</a></li>
+                    <li class="nav__submenu-item"><a href="index.html#soft-drinks">المشروبات الساقعه </a></li>
+                    <li class="nav__submenu-item"><a href="index.html#juices">العصائر</a></li>
+                </ul>
+            </li>
+            <li class="nav__menu-item"><a href="elhlwyatwicecream.html">الحلويات و الايسكريم</a>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a href="index.html#coffee">Coffee</a></li>
+                    <li class="nav__submenu-item"><a href="index.html#soft-drinks">Soft Drinks</a></li>
+                    <li class="nav__submenu-item"><a href="index.html#juices">Juices</a></li>
+                </ul>
+            </li>
+            <li class="nav__menu-item"><a href="elshorba.html">الشوربه</a></li>
+
+            <li class="nav__menu-item"><a href="elzabadywsalda.html">السلطات و الزبادي</a></li>
+
+            <li class="nav__menu-item"><a href="index.html#about">عننا</a></li>
+            <li class="nav__menu-item"><a href="index.html#contact"> تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Best Food Section -->
+<section id="best-food" class="menu-section">
+    <div class="container">
+        <h2 class="section-title">الباستا - Pasta</h2>
+        <div class="row">
+            <!-- Item 1: Pasta -->
+            <div class="col-md-4">
+                <div class="box">
+                    <h3 class="name"> ريد صوص</h3>
+                    <button class="btn btn-primary quick-view" data-name="الباستا"
+                        data-description="الباستا بينّا بصوص الطماطم الأحمر. المكرونة مطهية تمامًا ومغطاة بصوص غني بالطماطم مع لمسة من الثوم والأعشاب، ومزينة بجبنة مبشورة وبقدونس طازج. الطماطم الكرزية تضيف لونًا جميلًا ونكهة مميزة. الطبق متوازن في الطعم وشكله يشهي، مناسب كوجبة غداء أو عشاء خفيفة."
+                        data-price-medium="55 L.E" 
+                        data-price-large="70 L.E" 
+                        data-image="photos/pasta/redsous.png">
+                        بـــص بصــه 👀
+                    </button>
+                    <div class="circle"></div>
+                    <a href="pasta.html">
+                        <img class="product" src="photos/pasta/redsous.png" alt="الباستا">
+                    </a>
+                </div>
+            </div>
+                <!-- Item 2: Kofta -->
+                <div class="col-md-4">
+                    <div class="box">
+                        <h3 class="name">بالزبدة أعشاب كاسبر</h3>
+                        <button class="btn btn-primary quick-view" data-name="كفته مشوي"
+                            data-description=" السباغيتي بالريحان والثوم هي وجبة بسيطة ومثيرة للشهية، تتكون من عجينة سباغيتي مطهية مع زيت متبَّل بالثوم والريحان الطازج، ويتم تزيينها بالريحان المفروم."
+                            data-price-medium="75 L.E" 
+                            data-price-large="99 L.E" 
+                            data-image=".photos/pasta/Pasta with herbs.png">
+                            بـــص بصــه 👀
+                        </button>
+                        <div class="circle"></div>
+                        <a href="pasta.html">
+
+                            <img class="product" src="photos/pasta/Pasta with herbs.png" alt="كفته مشوي">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 3: Grilled Chicken -->
+                <div class="col-md-4">
+                    <div class="box">
+                        <h3 class="name">بالخضروات والزيتون</h3>
+                        <button class="btn btn-primary quick-view" data-name="نصف دجاجه مشويه"
+                            data-description="نصف دجاجه متبله بخلطة طبليه مصريه ومشويه على الفحم."
+                            data-price-medium="85 L.E" 
+                            data-price-large="110 L.E" 
+                            data-image="photos/pasta/Pasta with vegetables and olives.png">
+                            بـــص بصــه 👀
+                        </button>
+                        <div class="circle"></div>
+                        <a href="pasta.html">
+
+                            <img class="product" src="photos/pasta/Pasta with vegetables and olives.png" alt=" بالخضروات والزيتون                            ">
+
+
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Item 4: باللحمة المفرومة
+ -->
+                <div class="col-md-4">
+                <div class="box">
+                    <h3 class="name">باللحمة المفرومة</h3>
+                    <button class="btn btn-primary quick-view" 
+                            data-name=" باللحمة المفرومة" 
+                           data-description="بيتزا إيطالية تقليدية مع صلصة الطماطم والجبنة الموزاريلا الطازجة، مغطاة بالبيبروني والفطر والزيتون." 
+                            data-price="200 L.E" 
+                            data-image=".//photos/pizza.png">
+                        Quick View
+                    </button>
+                    <div class="circle"></div>
+                    <img class="product" src=".//photos/pizza.png" alt="باللحمة المفرومة
+                    ">
+                </div>
+            </div>
+
+                <!-- Item 5: Burger -->
+                <div class="col-md-4">
+                <div class="box">
+                    <h3 class="name">بالسوسيس</h3>
+                    <button class="btn btn-primary quick-view" 
+                            data-name=" بالسوسيس
+                            " 
+                            data-description="برجر لحم بقري مشوي مع جبنة شيدر، خس، طماطم، بصل، ومخلل، مع صلصة خاصة." 
+                            data-price="150 L.E" 
+                            data-image=".//photos/burger.png">
+                        Quick View
+                    </button>
+                    <div class="circle"></div>
+                    <img class="product" src=".//photos/burger.png" alt="بالسوسيس
+ ">
+                </div>
+            </div>
+
+                <!-- Item 6: Salad -->
+                <!-- <div class="col-md-4">
+                <div class="box">
+                    <h3 class="name">السلطات</h3>
+                    <button class="btn btn-primary quick-view" 
+                            data-name="سلطة سيزر" 
+                            data-description="سلطة سيزر مع خس الرومين، كروتونات، جبنة بارميزان، وصلصة سيزر الكلاسيكية." 
+                            data-price="80 L.E" 
+                            data-image=".//photos/salad.png">
+                        Quick View
+                    </button>
+                    <div class="circle"></div>
+                    <img class="product" src=".//photos/salad.png" alt="سلطة">
+                </div>
+            </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick View Modal -->
+<div class="modal fade" id="quickViewModal" tabindex="-1" role="dialog" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="quickViewTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img id="quickViewImage" src="" alt="Product Image" class="img-fluid">
+                <p id="quickViewDescription"></p>
+                <p><strong>Medium :</strong> <span id="quickViewPriceMedium"></span></p>
+                <p><strong>Large :</strong> <span id="quickViewPriceLarge"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section fade-in">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Reach out to us for reservations, inquiries, or just to say hello.</p>
+
+            <!-- First Location -->
+            <div class="contact-info">
+                <strong>Address:</strong>
+                <p>أكتوبر - محطة شل أوت - حدائق الأهرام</p>
+                <p><strong>Phone:</strong> +201111224224</p>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3454.0278025747925!2d31.03192507494475!3d30.03606021896896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDAyJzA5LjgiTiAzMcKwMDInMDQuMiJF!5e0!3m2!1sen!2seg!4v1737730963648!5m2!1sen!2seg"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="line"></div>
+
+            <!-- Second Location -->
+            <div class="contact-info">
+                <strong>Address:</strong>
+                <p>الدقي - محطة هل أوت - وزارة الزراعة</p>
+                <p><strong>Phone:</strong> +201111223223</p>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.8224815381827!2d31.211128199999994!3d30.041950300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584197305a671b%3A0x1a097f29a4183b36!2zQ2FzcGVyLdmD2KfYs9io2LE!5e0!3m2!1sen!2seg!4v1737730885823!5m2!1sen!2seg"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="line"></div>
+
+            <!-- Social Media Links -->
+            <div class="social-media">
+
+                <a href="https://www.instagram.com/casper.res1997?igsh=MXBqZm00anZlZzF3NA==" target="_blank"
+                    class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/15nBEEdAEu/?mibextid=wwXIfr" target="_blank"
+                    class="social-link"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="line2"></div>
+
+    <div class="end">
+        <p dir="ltr">© 2025, Casper Powered by <a href="https://wa.me/201234567890" target="_blank"
+                class="highlight-link">Mostafa</a></p>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="https://assets.codepen.io/7773162/vanilla-tilt.min.js"></script>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
