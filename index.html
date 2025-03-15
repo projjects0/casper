@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -139,7 +137,9 @@
 بـــص بصــه 👀
             </button>
             <div class="circle"></div>
-            <img class="product" src="./photos/pasta-removebg-preview.png" alt="Fried Chicken">
+            <a href="pasta.html">
+              <img class="product" src="./photos/pasta-removebg-preview.png" alt="Fried Chicken">
+            </a>
           </div>
         </div>
         <div class="col-md-4">
@@ -303,10 +303,71 @@
   </div>
 
   <!-- Scripts -->
-  <script src="https://assets.codepen.io/7773162/vanilla-tilt.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://assets.codepen.io/7773162/vanilla-tilt.min.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".box"), {
+        max: 15,
+        speed: 300,
+        easing: "cubic-bezier(.03,.98,.52,.99)",
+        scale: 1.05,
+      });
+    </script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
   
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      setTimeout(() => {
+              document.getElementById("overlay").classList.add("hidden");
+              document.getElementById("welcomeText").classList.add("show");
+          }, 1000);
+  
+          
+  
+  
+      document.addEventListener('DOMContentLoaded', function () {
+        const quickViewButtons = document.querySelectorAll('.quick-view');
+        const modal = new bootstrap.Modal(document.getElementById('quickViewModal'));
+        const modalTitle = document.getElementById('quickViewTitle');
+        const modalDescription = document.getElementById('quickViewDescription');
+        const modalImage = document.getElementById('quickViewImage');
+        const modalPrice = document.getElementById('quickViewPrice');
+  
+        quickViewButtons.forEach(button => {
+          button.addEventListener('click', function () {
+            const name = button.getAttribute('data-name');
+            const description = button.getAttribute('data-description');
+            const price = button.getAttribute('data-price');
+            const image = button.getAttribute('data-image');
+  
+            modalTitle.textContent = name;
+            modalDescription.textContent = description;
+            modalPrice.textContent = price;
+            modalImage.src = image;
+  
+            modal.show();
+          });
+        });
+      });
+    </script>
   
   
 </body>
